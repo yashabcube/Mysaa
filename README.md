@@ -1,36 +1,44 @@
-# MYŚAA Luxe Store — v4.2
+# MYŚAA Luxe Store (v4.4)
 
-Static front-end for the MYŚAA Luxe e-commerce site (Himalayan botanical skincare, Australia).
-Design and build by Cubical Frames. Prepared for migration to Shopify.
+Static website for MYŚAA, Himalayan organic skincare. There's no build step: serve the folder with any web server and open `index.html`.
 
-## Pages (hash-routed, single `index.html`)
-- `#home` — hero, collection, reels, Who it is for, From foothills to your vanity, rituals, texture videos, reviews, awards & certifications, press, newsletter
-- `#shop` — shop with tabs (All, Bestsellers, Face, Mists, Lips & hands, Rituals), skin-type and concern filters
-  - `#rituals` opens the shop on the Rituals tab
-  - `#shop-skin-<type>`, `#shop-concern-<concern>`, `#shop-grp-<category>` open filtered views (used by the Shop mega menu)
-- `#product-<id>` — product and ritual pages
-- `#story` — Our story (content from mysaasecrets.com.au/pages/our-story)
-- `#contact` — contact details, message and callback forms
-- `#journal` — press placeholder
+## Folder structure
 
-## Run locally
-Open `index.html` through any static server, for example:
+```
+mysaa-luxe-store/
+├── index.html          Whole site: layout, styles and scripts
+├── data.js             Products, prices, reviews
+├── README.md
+├── fonts/              Aileron + Erstoria                         (5 files)
+├── js/                 GSAP, ScrollTrigger, Lenis                 (3 files)
+│   └── 3d/             Optional 3D bottle viewer (not on homepage) (3 files)
+├── media/              Reel and texture videos                    (9 files)
+├── photos/             Hero, lifestyle, ritual, press photos      (74 files)
+└── img/
+    ├── p/              Product packshots                          (16 files)
+    ├── ing/            Ingredient images                          (12 files)
+    ├── hold/           "Hold the ritual" bottles, labels, silk bg  (8 files)
+    └── award/          Award badges                                (5 files)
+```
+
+That's 138 files in total. No folder has more than 80 files, so each one fits within GitHub's limit of 100 files per upload.
+
+## Uploading to GitHub in the browser
+
+GitHub's web uploader takes at most 100 files at a time, so upload in two rounds.
+
+1. Create a new empty repository.
+2. **Round 1 (64 files).** Click **Add file → Upload files** and drag in `index.html`, `data.js`, `README.md` and the `fonts`, `js`, `media` and `img` folders together. Commit.
+3. **Round 2 (74 files).** Click **Add file → Upload files** again and drag in the `photos` folder. Commit.
+
+## Viewing it live (GitHub Pages)
+
+Go to **Settings → Pages**, choose **Deploy from a branch**, then `main` / `(root)`, and save. After a minute or two the site is live at `https://<your-username>.github.io/<repo-name>/`.
+
+## Running locally
 
 ```
 python3 -m http.server 8000
 ```
 
-then visit http://localhost:8000.
-
-## Structure
-- `index.html` — markup, styles and app logic
-- `data.js` — product data and verified reviews
-- `fonts/` — Erstoria (headings) and Aileron (body), woff2
-- `js/` — GSAP, ScrollTrigger, Lenis (bundled locally)
-- `img/` — product cut-outs (`p/`), star-ingredient images (`ing/`), award badges (`award/`), scenes and press
-- `media/` — reels and texture videos
-
-## Notes
-- Prices are AUD; other currencies are indicative only (Shopify Markets will handle conversion).
-- Placeholders in square brackets (INCI lists, Acknowledgement of Country, shipping times) need client copy.
-- Forms validate but do not submit yet; connect to Shopify / email service on migration.
+Then open http://localhost:8000. Opening `index.html` directly from disk (`file://`) won't work, because the browser blocks the bottle labels, which are loaded as WebGL textures.

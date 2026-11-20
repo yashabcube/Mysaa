@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MYŚAA · Himalayan botanical skincare</title>
 <link rel="icon" href="data:,">
-<meta name="description" content="Certified organic Himalayan skincare, slow-infused in small batches. Radiance Elixir, Aurora Bloom and the MYŚAA rituals. Ships from Australia.">
+<meta name="description" content="Certified organic Himalayan skincare, slow-infused in small batches. Intense Radiance 24K Gold Oil Serum, Absolute Brilliance Crème and the MYŚAA rituals. Ships from Australia.">
 <style>
 @font-face{font-family:"Erstoria";src:url(fonts/Erstoria.woff2) format("woff2");font-display:swap}
 @font-face{font-family:"Aileron";src:url(fonts/Aileron-Light.woff2) format("woff2");font-weight:300;font-display:swap}
@@ -676,6 +676,466 @@ header.hdr:has(.mm:hover){background:rgba(26,16,22,.98)}
   .logo svg{height:19px}
   .announce{font-size:10px}
 }
+/* ===== v4.4 MINIMAL LIGHT ===== */
+:root{--bg-ivory:#F7F3EE;--bg-white:#FCFAF7;--bg-blush:#F4E8E3;--bg-stone:#EFEBE4;--bg-sage:#E8EBE2;--bg-lav:#EEEAF1;--pk:#EEE6D9}
+.bg-ivory{background:var(--bg-ivory)}.bg-white{background:var(--bg-white)}.bg-blush{background:var(--bg-blush)}.bg-stone{background:var(--bg-stone)}.bg-sage{background:var(--bg-sage)}.bg-lav{background:var(--bg-lav)}
+.m-sec{color:var(--t-l);padding:clamp(110px,12vw,190px) 0}
+.m-sec .sub.gold{color:var(--gold-d)}
+.m-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(44px,5vw,72px)}
+.m-head .sub{margin-bottom:18px}
+.m-head h2{max-width:18ch}
+.m-note{max-width:34ch;font-size:15px}
+/* header goes light once you scroll, and on product pages */
+header.hdr.scrolled,body:not(.is-home) header.hdr{background:rgba(250,247,243,.9);color:var(--t-l);border-bottom:1px solid rgba(37,27,39,.07);backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2)}
+.logo{color:inherit}
+header.hdr:not(.scrolled) .logo{color:#F2EBE1}
+body:not(.is-home) header.hdr .logo{color:var(--t-l)}
+header.hdr.scrolled .cur,body:not(.is-home) header.hdr .cur{border-color:rgba(37,27,39,.16)}
+header.hdr.scrolled .icon-btn:hover{background:rgba(37,27,39,.05)}
+header.hdr:has(.mm:hover){background:#FAF7F3;color:var(--t-l)}
+header.hdr:has(.mm:hover) .logo{color:var(--t-l)}
+.mm-panel{background:#FAF7F3;color:var(--t-l);border-top:1px solid rgba(37,27,39,.08)}
+/* hero: one calm scene */
+.hero-min .slide img{object-position:70% 50%}
+.hero-min .hero-top{top:auto;bottom:clamp(90px,16vh,170px)}
+.hero-min .hero-top .ctas{margin-top:34px;display:flex;gap:10px}
+.hero-min h1{max-width:13ch}
+/* trust strip, light */
+.trust.t-light{background:var(--bg-ivory);border-bottom:1px solid var(--line-l)}
+.trust.t-light span{color:var(--t-lm)}
+/* product cards: real packshot, lifestyle on hover */
+.pcard,.pcard:hover{background:transparent;color:var(--t-l)}
+.pcard:hover .pc-l2{color:var(--t-lm)}
+.pcard:hover .pc-l1,.pcard:hover .pc-l3{border-color:var(--line-l)}
+.pcard:hover .pc-l2 .rc,.pcard:hover .pc-l3 s,.pcard:hover .pc-l3 .muted-l{color:var(--t-lm)}
+.pc-media{background:var(--pk);border-radius:4px;aspect-ratio:4/5}
+.pc-media .pk,.pc-media .life{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pc-media .pk{transition:transform 1.4s var(--ease)}
+.pc-media .life{opacity:0;transform:scale(1.04);transition:opacity .8s var(--ease),transform 1.4s var(--ease)}
+.pcard:hover .life{opacity:1;transform:scale(1)}
+.pcard:hover .award{opacity:0}
+.pc-info{padding:16px 2px 0}
+.pc-media .tag-new{background:#fff;color:var(--t-l)}
+.grid{gap:clamp(14px,1.6vw,24px);row-gap:clamp(36px,4vw,56px)}
+.bg-ivory .col-tabs{margin-bottom:40px}
+/* who it is for */
+.m-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,130px);align-items:center}
+.m-img{aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.m-img img{width:100%;height:100%;object-fit:cover}
+.m-copy{max-width:520px}
+.m-copy .sub{margin-bottom:22px}
+.m-copy h2{max-width:11ch}
+.m-copy .lede{margin:28px 0 36px;color:#4A3F4D}
+/* rituals */
+.rit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,24px)}
+.rit-img{display:block;position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.rit-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.rit:hover .rit-img img{transform:scale(1.04)}
+.rit-when{position:absolute;left:14px;top:14px;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:rgba(252,250,247,.9);padding:6px 10px;border-radius:2px}
+.rit-body{padding:20px 2px 0}
+.rit-steps{list-style:none;counter-reset:s;margin:12px 0 18px;font-size:14px;color:var(--t-lm)}
+.rit-steps li{counter-increment:s;padding:3px 0}
+.rit-steps li::before{content:counter(s,decimal-leading-zero);font-size:10.5px;font-weight:600;letter-spacing:.1em;margin-right:10px;color:var(--gold-d)}
+.rit-steps a:hover{color:var(--t-l)}
+.rit-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line-l);padding-top:14px}
+.rit-foot .pr{font-weight:600;font-size:14px}.rit-foot s{color:var(--t-lm);font-weight:400;margin-left:6px}
+/* lifestyle row */
+.life-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,24px);padding:0 var(--pad);max-width:1600px;margin:0 auto}
+.life .li-img{aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.life img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.life:hover img{transform:scale(1.04)}
+.li-cap{padding-top:16px;display:flex;flex-direction:column;gap:4px}
+.li-cap b{font-family:var(--head);font-weight:400;font-size:clamp(19px,1.5vw,22px);letter-spacing:-.3px}
+.li-cap span{font-size:13.5px;color:var(--t-lm)}
+/* foothills to vanity: three quiet steps */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,48px)}
+.st-img{aspect-ratio:3/2;overflow:hidden;border-radius:4px;margin-bottom:24px}
+.st-img img{width:100%;height:100%;object-fit:cover}
+.st-n{display:block;font-size:11.5px;font-weight:600;letter-spacing:.14em;color:var(--gold-d);margin-bottom:10px}
+.st h3{margin-bottom:10px}
+.st p{max-width:36ch;font-size:15px}
+/* reels, light */
+.reels-light .reel{box-shadow:none}
+/* reviews */
+.rv-min{background:var(--bg-white);min-height:0}
+.rv-min .rv-left{padding:clamp(110px,12vw,180px) clamp(24px,5vw,90px)}
+.rv-min .rv-right{min-height:min(88vh,860px)}
+/* awards + press */
+.aw-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;padding-bottom:clamp(44px,5vw,64px);border-bottom:1px solid rgba(37,27,39,.1)}
+.aw-b{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.aw-b img{width:92px;height:92px;object-fit:contain;margin-bottom:10px}
+.aw-b b{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.aw-b span{font-size:13px;color:var(--t-lm)}
+.press-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;padding:clamp(30px,4vw,48px) 0}
+.press-row a{display:flex;flex-direction:column;gap:4px;padding:18px 0;border-bottom:1px solid rgba(37,27,39,.08)}
+.press-row b{font-family:var(--head);font-weight:400;font-size:21px}
+.press-row span{font-size:14px;color:var(--t-lm)}
+.certs-l{border-color:rgba(37,27,39,.1);margin-top:clamp(20px,3vw,40px)}
+.certs-l .cert{border-color:rgba(37,27,39,.1);color:var(--t-l)}
+.certs-l .cert svg{stroke:var(--gold-d)}
+footer{background:var(--bg-stone);color:var(--t-lm);border-top:1px solid var(--line-l)}
+footer h5{color:var(--t-l)}
+footer a:hover{color:var(--gold-d)}
+footer .logo,footer .f-logo{color:var(--t-l)}
+.f-sign input{border-color:rgba(37,27,39,.16);color:var(--t-l)}
+.ack{border-color:rgba(37,27,39,.1)}
+.gallery .g .cut{left:0;top:0;bottom:auto;width:100%;height:100%;object-fit:contain;transform:none;filter:none}
+.mm-bar{background:#F1ECE5;border-top:1px solid rgba(37,27,39,.08)}
+@media (max-width:820px){
+  .hero-min .slide img{object-position:72% 50%}
+  .hero-min::after{content:"";position:absolute;inset:auto 0 0 0;height:70%;z-index:3;background:linear-gradient(to top,rgba(14,8,10,.88),rgba(14,8,10,.5) 55%,transparent);pointer-events:none}
+  .hero-min .hero-top{bottom:clamp(60px,9vh,100px)}
+  .hero-min .in-scene{display:none}
+}
+@media (max-width:600px){.rit-grid{grid-template-columns:1fr}.rit-img{aspect-ratio:5/4}}
+.hero-min .hero-bot .wrap{justify-content:flex-end}
+.hero-min .in-scene{align-items:flex-end;text-align:right}
+.hero-min .in-scene .names{max-width:38ch}
+.hr-words .hw{display:inline-block}
+.hr-words .hw > span{display:inline-block;will-change:transform,opacity,filter}
+.hero-min .hero-top{bottom:clamp(110px,18vh,190px)}
+.hero-min .slide img{object-position:65% 50%}
+.hero-min::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(14,8,12,.62),rgba(14,8,12,.25) 45%,transparent 70%);pointer-events:none}
+.hero-min .in-scene .names{text-shadow:0 1px 14px rgba(10,6,8,.75),0 0 2px rgba(10,6,8,.5);color:#F3EBE4}
+@media (min-width:821px){.hero-min::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;z-index:3;background:linear-gradient(to top,rgba(14,8,12,.55),transparent);pointer-events:none}}
+/* newsletter is the one dark moment */
+
+@media (max-width:980px){
+  .rit-grid,.life-row{grid-template-columns:repeat(2,1fr)}
+  .aw-row{grid-template-columns:repeat(3,1fr);row-gap:30px}
+  .press-row{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .m-split,.steps3{grid-template-columns:1fr}
+  .m-head{flex-direction:column;align-items:flex-start}
+  .life-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .life-row .life{flex:0 0 72%;scroll-snap-align:start}
+  .press-row{grid-template-columns:1fr}
+  .aw-row{grid-template-columns:repeat(2,1fr)}
+  .rv-min{grid-template-columns:1fr}
+}
+/* ===== v4.4 r2: beige/white only ===== */
+.bg-beige{background:var(--ivory)}
+.trust.t-light{background:var(--ivory)}
+footer{background:var(--ivory)}
+.rv-min{background:var(--ivory)}
+/* REELS — stays fixed: revealed from under section 3, then covered by section 5 (indigo-laboratory style) */
+#main > section,#main > .trust{position:relative;z-index:2}
+#main > .reels-sec{position:sticky;top:0;bottom:0;z-index:1;height:100vh;min-height:700px;display:flex;flex-direction:column;justify-content:center;padding:90px 0 40px;background:var(--ivory);color:var(--t-l)}
+.reels-sec .gf{display:none}
+#main > .reels-sec > .wrap{width:100%}
+.reels-sec .sub.gold{color:var(--gold-d)}
+.reels-sec .muted-d{color:var(--t-lm)}
+.reels-sec .reel{box-shadow:0 30px 60px -36px rgba(60,40,50,.35)}
+@media (max-width:820px){#main > .reels-sec{position:relative;height:auto;min-height:0;z-index:2}}
+/* 3D bottles */
+.b3d{position:relative;height:100vh;min-height:720px;overflow:hidden;background:#140c0b;color:#F4ECE4}
+.b3d-bg,.b3d-bg img{position:absolute;inset:0;width:100%;height:100%}
+.b3d-bg img{object-fit:cover;object-position:50% 85%}
+.b3d-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,8,8,.55),rgba(14,8,8,0) 38%),radial-gradient(60% 50% at 50% 60%,transparent,rgba(14,8,8,.35));pointer-events:none}
+.b3d canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;cursor:grab;z-index:2}
+.b3d-head{position:absolute;left:0;right:0;top:clamp(92px,12vh,130px);z-index:3;pointer-events:none;text-align:center}
+.b3d-head .sub{color:var(--gold-l);margin-bottom:16px}
+.b3d-head p{margin-top:12px;color:#D9CBC0;font-size:15px}
+.b3d-loading{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);z-index:3;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#D9CBC0;transition:opacity .8s;pointer-events:none}
+.b3d-lab{position:absolute;z-index:3;transform:translate(-50%,18px);width:min(240px,28vw);text-align:center;display:flex;flex-direction:column;align-items:center;gap:5px;text-shadow:0 1px 12px rgba(0,0,0,.6);opacity:0;transition:opacity 1s .2s}
+.b3d.ready .b3d-lab{opacity:1}
+.b3d-lab b{font-family:var(--head);font-weight:400;font-size:clamp(16px,1.3vw,20px);line-height:1.25}
+.b3d-lab span{font-size:13px;color:#D9CBC0}
+.b3d-lab .tbtn{color:var(--gold-l)}
+@media (max-width:720px){.b3d{height:100svh}.b3d-lab{width:31vw}.b3d-lab b{font-size:13.5px}.b3d-lab span{font-size:11.5px}}
+.g3d{background:radial-gradient(70% 60% at 50% 40%,#F6F1EA,#EAE2D6)!important;position:relative}
+.g3d canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.g3d-hint{position:absolute;left:14px;bottom:14px;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--t-lm);background:rgba(252,250,247,.8);padding:6px 10px;border-radius:2px}
+@media (max-width:720px){.b3d-stage{height:76vh;min-height:480px}.b3d-lab{width:31vw}.b3d-lab b{font-size:14px}.b3d-lab .tbtn .x{display:none}}
+/* 3D section wrapper + awards strip */
+.b3d-wrap{background:#140c0b;color:#F4ECE4}
+.b3d-aw{padding:clamp(50px,6vw,90px) 0 clamp(80px,8vw,120px);background:linear-gradient(180deg,#160d0b,#1d1210)}
+.b3d-aw-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.b3d-aw-head .sub{color:var(--gold-l)}
+.b3d-aw .aw-row{border-bottom:none;padding-bottom:0}
+.b3d-aw .aw-b b{color:#F4ECE4}.b3d-aw .aw-b span{color:#B8A9A0}
+.lu-certs{margin-top:clamp(70px,8vw,110px)}
+.lu-certs .sub{color:var(--gold-d);margin-bottom:18px}
+/* who: awards on dark blur */
+.dt{height:auto!important;min-height:0}
+.dt-track{height:150vh;min-height:900px;position:relative}
+.dt-aw{position:relative;z-index:2;padding:clamp(60px,7vw,100px) 0 clamp(70px,8vw,110px);background:rgba(18,10,8,.5);backdrop-filter:blur(26px) saturate(1.1);-webkit-backdrop-filter:blur(26px) saturate(1.1);border-top:1px solid rgba(255,240,220,.08)}
+.dt-aw .b3d-aw-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.dt-aw .sub{color:var(--gold-l)}
+.dt-aw .aw-row{border-bottom:none;padding-bottom:0}
+.dt-aw .aw-b b{color:#F4ECE4}.dt-aw .aw-b span{color:#C9BAB0}
+/* hold: light stage */
+.b3d-wrap{background:#efe7dc;color:var(--t-l)}
+.b3d.light{background:#efe7dc;color:var(--t-l)}
+.b3d.light .b3d-shade{background:linear-gradient(180deg,rgba(250,246,240,.55),rgba(250,246,240,0) 34%)}
+.b3d.light .b3d-head .sub{color:var(--gold-d)}
+.b3d.light .b3d-head p{color:var(--t-lm)}
+.b3d.light .b3d-loading{color:var(--t-lm)}
+.b3d.light .b3d-lab{text-shadow:none}
+.b3d.light .b3d-lab span{color:#4A3F4D}
+
+.b3d.light .b3d-lab .tbtn{color:var(--t-l)}
+/* HOLD THE RITUAL — dark silk, turning bottles, progressive blur at the base */
+.hold{background:#120b08;color:#F4ECE4}
+.hs{position:relative;height:100vh;min-height:760px;overflow:hidden;isolation:isolate}
+.hs-bg,.hs-bg img{position:absolute;inset:0;width:100%;height:100%}
+.hs-bg img{object-fit:cover;object-position:50% 50%;transform:scale(1.06);transition:transform 2.4s var(--ease)}
+.hs.in .hs-bg img{transform:scale(1)}
+.hs-vig{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(70% 60% at 50% 48%,transparent 40%,rgba(10,6,4,.55)),linear-gradient(180deg,rgba(10,6,4,.6),transparent 30%)}
+.hs-head{position:absolute;left:0;right:0;top:clamp(96px,12vh,132px);z-index:3;text-align:center;pointer-events:none}
+.hs-head .sub{color:var(--gold-l);margin-bottom:14px}
+.hs-head p{margin-top:12px;color:#D4C3B6;font-size:15px}
+/* progressive blur: 0% at the top of the band, 100% at the very bottom */
+.hs-blur{position:absolute;left:0;right:0;bottom:0;height:46%;z-index:1;pointer-events:none}
+.hs-blur i,.hs-blur b{position:absolute;inset:0}
+.hs-blur i:nth-child(1){backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);mask:linear-gradient(transparent 0%,#000 16%,#000 33%,transparent 50%);-webkit-mask:linear-gradient(transparent 0%,#000 16%,#000 33%,transparent 50%)}
+.hs-blur i:nth-child(2){backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);mask:linear-gradient(transparent 16%,#000 33%,#000 50%,transparent 66%);-webkit-mask:linear-gradient(transparent 16%,#000 33%,#000 50%,transparent 66%)}
+.hs-blur i:nth-child(3){backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);mask:linear-gradient(transparent 33%,#000 50%,#000 66%,transparent 83%);-webkit-mask:linear-gradient(transparent 33%,#000 50%,#000 66%,transparent 83%)}
+.hs-blur i:nth-child(4){backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);mask:linear-gradient(transparent 50%,#000 66%,#000 83%,transparent 100%);-webkit-mask:linear-gradient(transparent 50%,#000 66%,#000 83%,transparent 100%)}
+.hs-blur i:nth-child(5){backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);mask:linear-gradient(transparent 66%,#000 83%,#000 100%);-webkit-mask:linear-gradient(transparent 66%,#000 83%,#000 100%)}
+.hs-blur i:nth-child(6){backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);mask:linear-gradient(transparent 83%,#000 100%);-webkit-mask:linear-gradient(transparent 83%,#000 100%)}
+.hs-blur b{background:linear-gradient(180deg,rgba(14,8,6,0) 0%,rgba(14,8,6,.28) 55%,rgba(14,8,6,.62) 100%)}
+.hs-row{position:absolute;left:0;right:0;bottom:clamp(30px,5vh,56px);top:clamp(230px,27vh,290px);z-index:2;display:flex;justify-content:center;gap:clamp(40px,9vw,160px)}
+.hs-item{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:min(250px,22vw)}
+.hs-bt{position:relative;flex:1;min-height:0;width:100%;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-drag:none}
+.hs-bt.grab{cursor:grabbing}
+.hs-float{position:relative;height:min(92%,60vh);aspect-ratio:640/2219;animation:hsFloat 7s ease-in-out infinite;animation-delay:var(--d)}
+.hs-tilt{position:absolute;inset:0;transform:rotate(var(--tilt));opacity:0;translate:0 40px;transition:opacity 1.4s var(--ease),translate 1.6s var(--ease)}
+.hs.in .hs-tilt{opacity:1;translate:0 0}
+.hs-item:nth-child(2) .hs-tilt{transition-delay:.15s}.hs-item:nth-child(3) .hs-tilt{transition-delay:.3s}
+.hs-tilt img,.hs-tilt canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hs-tilt img{filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.hs-glowb{position:absolute;left:50%;top:52%;width:150%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(226,170,92,.20),rgba(226,170,92,.05) 42%,transparent 66%);pointer-events:none}
+@keyframes hsFloat{0%,100%{transform:translateY(-8px)}50%{transform:translateY(8px)}}
+.hs-lab{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;padding-top:clamp(14px,2.4vh,26px);text-shadow:0 1px 14px rgba(0,0,0,.6)}
+.hs-lab b{font-family:var(--head);font-weight:400;font-size:clamp(15px,1.15vw,19px);line-height:1.25;color:#F6EEE6;white-space:nowrap}
+@media (max-width:820px){.hs-lab b{white-space:normal;display:block;min-height:2.5em}}
+.hs-lab span{font-size:13px;color:#D4C3B6}
+.hs-lab .tbtn{color:var(--gold-l)}
+@media (max-width:820px){
+  .hs{height:100svh;min-height:640px}
+  .hs-head{top:96px}.hs-head p{font-size:13.5px}
+  .hs-row{top:210px;bottom:26px;gap:2vw;padding:0 2vw}
+  .hs-item{width:30vw}
+  .hs-float{height:min(84%,38vh)}
+  .hs-lab b{font-size:13px}.hs-lab span{font-size:11.5px}.hs-lab .tbtn{font-size:10.5px}
+}
+@media (prefers-reduced-motion:reduce){.hs-float{animation:none}}
+/* WHO — letter-spread text over parallax image (dropedition style) */
+.dt{position:relative;height:150vh;min-height:900px;overflow:hidden;color:#F6EFE8;background:#1a1110}
+.dt-bg{position:absolute;left:0;right:0;top:-12%;height:124%;will-change:transform}
+.dt-bg img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.dt-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,10,.35),rgba(20,12,10,.1) 40%,rgba(20,12,10,.45));pointer-events:none}
+.dt-in{position:sticky;top:0;height:100vh;}
+.dt-small{position:absolute;left:var(--gpad);top:clamp(110px,16vh,170px);font-size:clamp(15px,1.15vw,18px);line-height:1.5;font-weight:400;letter-spacing:.02em}
+.dt-big{position:absolute;left:46%;bottom:clamp(60px,12vh,120px);font-family:var(--head);font-weight:400;font-size:clamp(40px,5vw,82px);line-height:1.08;letter-spacing:-1px}
+.dl{display:block;white-space:nowrap}
+.dc{display:inline-block;will-change:margin}
+/* RITUALS — pinned carousel, one ritual per scroll step */
+.rc{position:relative;height:calc(var(--n) * 100vh);background:var(--bg-white);color:var(--t-l);--w:min(40vw,600px,64vh)}
+.rc-pin{position:sticky;top:0;height:100vh;overflow:hidden}
+.rc-top{position:absolute;left:0;right:0;top:clamp(96px,13vh,130px);display:flex;justify-content:space-between;align-items:center;z-index:6}
+.rc-top .sub{color:var(--gold-d)}
+.rc-count{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--t-lm)}
+.rc-track{position:absolute;inset:0}
+.rc-slide{position:absolute;left:50%;top:calc(50% + 4vh);width:var(--w);aspect-ratio:4/5;transform:translate(-50%,-50%);overflow:hidden;will-change:transform}
+.rc-slide img{width:100%;height:100%;object-fit:cover}
+.rc-card{position:absolute;z-index:5;left:calc(50% + var(--w)*.22);top:calc(50% + 4vh - var(--w)*.18);width:min(330px,26vw);min-height:calc(var(--w)*.86);background:rgba(252,250,247,.42);backdrop-filter:blur(16px) saturate(1.1);-webkit-backdrop-filter:blur(16px) saturate(1.1);border:1px solid rgba(37,27,39,.28);display:grid}
+.rc-c{grid-area:1/1;padding:22px 22px 0;display:flex;flex-direction:column;opacity:0;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease);pointer-events:none}
+.rc-c.on{opacity:1;transform:none;pointer-events:auto}
+.rc-num{font-family:var(--head);font-weight:300;font-size:clamp(56px,5vw,80px);line-height:1;letter-spacing:-2px}
+.rc-when{margin-top:18px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+.rc-name{font-family:var(--head);font-weight:400;font-size:clamp(20px,1.6vw,24px);margin-top:6px}
+.rc-line{font-size:13.5px;line-height:1.55;margin-top:10px;color:#4A3F4D}
+.rc-steps{list-style:none;counter-reset:s;margin:12px 0 18px;font-size:13px;color:var(--t-lm)}
+.rc-steps li{counter-increment:s;padding:2px 0}
+.rc-steps li::before{content:counter(s,decimal-leading-zero);font-size:10px;font-weight:600;margin-right:8px;color:var(--gold-d)}
+.rc-btn{margin:auto -22px 0;border-top:1px solid rgba(37,27,39,.28);padding:14px 22px;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-align:center;transition:background .3s,color .3s}
+.rc-btn s{font-weight:400;opacity:.6;margin-left:6px}
+.rc-btn:hover{background:var(--t-l);color:var(--ivory)}
+.rc-hint{position:absolute;z-index:6;left:var(--gpad);bottom:28px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--t-lm)}
+/* KEPT CLOSE — lineup reveal + numbered selector */
+.lu{color:var(--t-l);padding:clamp(100px,11vw,170px) 0 clamp(100px,11vw,170px)}
+.lu-label{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+.lu-row{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 var(--pad);max-width:1600px;margin:0 auto}
+.lu-img{position:relative;aspect-ratio:4/5;overflow:hidden;clip-path:inset(0 0 100% 0);will-change:clip-path}
+.lu-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.lu-img:hover img{transform:scale(1.04)}
+.lu-img span{position:absolute;left:12px;bottom:12px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5);opacity:0;transition:opacity .4s}
+.lu-img:hover span{opacity:1}
+.lu-bar{display:flex;justify-content:space-between;align-items:center;gap:30px;margin:clamp(70px,8vw,120px) auto 36px}
+.lu-bar h2{max-width:16ch}
+.lu-nums{display:flex;align-items:center;gap:clamp(14px,2.4vw,40px)}
+.lu-n{font-family:var(--head);font-size:clamp(20px,1.8vw,28px);color:rgba(37,27,39,.28);transition:color .3s}
+.lu-n:hover{color:rgba(37,27,39,.6)}.lu-n.on{color:var(--t-l)}
+.lu-arr{font-size:22px;margin-right:clamp(10px,2vw,30px)}
+.lu-body{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(16px,2vw,28px);transition:opacity .35s}
+.lu-big{aspect-ratio:4/5;overflow:hidden}
+.lu-big img{width:100%;height:100%;object-fit:cover}
+.lu-side{display:flex;flex-direction:column}
+.lu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lu-p{display:block}
+.lu-p img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--pk);transition:transform .8s var(--ease)}
+.lu-p:hover img{transform:translateY(-4px)}
+.lu-p span{display:flex;flex-direction:column;font-size:12.5px;color:var(--t-lm);padding-top:8px}
+.lu-p b{font-weight:600;color:var(--t-l);font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1.35}
+.lu-txt{margin-top:auto;padding-top:32px;max-width:52ch}
+.lu-txt p{margin:12px 0 22px;color:#4A3F4D;font-size:15px}
+@media (max-width:820px){
+  .dt{height:130vh}.dt-bg img{object-position:16% 40%}.dt-big{left:var(--gpad);right:var(--gpad);font-size:clamp(32px,9vw,46px)}
+  .rc{--w:min(74vw,46vh)}
+  .rc-slide{top:40%}
+  .rc-card{left:50%;transform:translateX(-50%);top:auto;bottom:22px;width:88vw;min-height:0}
+  .rc-num{font-size:40px}.rc-line{display:none}.rc-hint{display:none}
+  .lu-row{grid-template-columns:repeat(2,1fr)}
+  .lu-bar{flex-direction:column;align-items:flex-start}
+  .lu-body{grid-template-columns:1fr}
+}
+
+/* DIOR-STYLE OPENING: hero shrinks, slides left and docks; the collection fills the right */
+.dh{position:relative;background:#fff;color:var(--t-l)}
+.dh-pin{position:sticky;top:0;height:100vh;z-index:3;pointer-events:none}
+.dh-pin .hero{position:absolute;left:0;top:0;width:100%;height:100%;min-height:0;pointer-events:auto;will-change:left,top,width,height;color:#F0EBE6}
+.dh-pin .hero-top{transform-origin:0 100%}
+.dh-side{position:relative;z-index:1;margin-top:-100vh;margin-left:calc(40vw + var(--gpad) + clamp(28px,3vw,56px));padding:calc(var(--dockS,90vh) + 112px) var(--gpad) clamp(70px,8vw,120px) 0}
+.dh-head{margin-bottom:26px}
+.dh-side .col-tabs{margin:0 0 32px}
+.dh-side .grid{grid-template-columns:repeat(2,1fr)}
+@media (max-width:820px){
+  .dh-pin{position:relative;height:auto}
+  .dh-pin .hero{position:relative;height:100svh;min-height:600px}
+  .dh-side{margin:0;padding:clamp(56px,10vw,90px) 0 clamp(56px,10vw,90px)}
+  .dh-head{padding:0 var(--gpad)}
+  .dh-side .col-tabs{margin:0 var(--gpad) 28px}
+  .dh-side .grid{padding:0 var(--gpad)}
+}
+
+/* FOOTER — Dior-style */
+footer.fd{background:#F6F4F1;color:#3b3236;border-top:none;padding:clamp(40px,5vw,64px) 0 26px;font-size:13px}
+.fd-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:clamp(36px,4vw,52px);border-bottom:1px solid rgba(37,27,39,.1)}
+.fd-perk{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;background:#fff;border-radius:4px;transition:box-shadow .4s var(--ease)}
+.fd-perk:hover{box-shadow:0 8px 30px rgba(40,25,20,.08)}
+.fd-perk b{display:block;font-weight:600;font-size:13.5px;color:var(--t-l);margin-bottom:4px}
+.fd-perk span{color:#6d6266;font-size:12.5px;line-height:1.5}
+.fd-perk svg{width:8px;height:14px;flex:none;color:var(--t-l)}
+.fd-nl{padding:clamp(36px,4vw,52px) 0 clamp(40px,5vw,64px)}
+.fd-nl h4{font-family:var(--head);font-weight:400;font-size:20px;color:var(--t-l);margin-bottom:18px}
+.fd-sign{display:flex;gap:8px;max-width:540px}
+.fd-sign input{flex:1;height:48px;padding:0 18px;border:1px solid rgba(37,27,39,.22);border-radius:4px;background:#fff;color:var(--t-l);font-size:13px;outline:none;transition:border-color .3s}
+.fd-sign input:focus{border-color:var(--t-l)}
+.fd-sign button{height:48px;padding:0 26px;border-radius:4px;background:#2a2326;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.04em;transition:background .3s}
+.fd-sign button:hover{background:#000}
+.fd-msg{margin-top:10px;color:var(--gold-d);min-height:1em}
+.fd-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-bottom:clamp(36px,4vw,56px)}
+.fd-col h5{font-family:var(--head);font-weight:400;font-size:19px;letter-spacing:0;text-transform:none;color:var(--t-l);margin-bottom:24px}
+.fd-col li{list-style:none;margin:0 0 14px}
+.fd-col a{display:inline-flex;align-items:center;gap:8px;color:#4a4044;font-size:12.5px;transition:color .3s}
+.fd-col a:hover{color:var(--t-l);text-decoration:underline;text-underline-offset:3px}
+.fd-chev{width:9px;height:6px}
+.fd-ack{font-size:12px;color:#8a8084;padding-bottom:20px;max-width:70ch}
+.fd-bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:22px 0;border-top:1px solid rgba(37,27,39,.1)}
+.fd-social{display:flex;flex-wrap:wrap;gap:18px;font-size:12px;color:#4a4044}
+.fd-social span{color:#8a8084}
+.fd-social a:hover{color:var(--t-l)}
+.fd-logo{color:var(--t-l);display:block;width:112px}
+.fd-logo svg{width:100%;height:auto;display:block}
+.fd-country{justify-self:end;display:flex;align-items:center;gap:22px;font-size:12px;color:#6d6266;text-align:right}
+.fd-country b{font-weight:600;color:var(--t-l)}
+.fd-country svg{width:7px;height:12px;color:var(--t-l)}
+.fd-copy{font-size:11.5px;color:#8a8084;text-align:center;padding-top:6px}
+@media (max-width:820px){
+  .fd-perks{grid-template-columns:1fr;gap:10px}
+  .fd-cols{grid-template-columns:1fr 1fr;row-gap:36px}
+  .fd-bar{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .fd-social{justify-content:center}.fd-logo{order:-1}.fd-country{justify-self:center}
+}
+
+/* DOCK v2 — panel fills the left edge, top and bottom; Dior product row on the right */
+.dh{background:#F8F7F5}
+.dh-side{margin-left:40vw;padding:calc(var(--dockS,90vh) + 120px) 0 clamp(70px,8vw,110px);min-height:calc(var(--dockS,90vh) + 100vh)}
+.dh-in{display:flex;flex-direction:column;align-items:center;padding:0 clamp(24px,3vw,56px);text-align:center}
+.dh-head .sub{margin-bottom:12px}
+.dh-title{font-family:var(--head);font-weight:400;font-size:clamp(26px,2.3vw,38px);line-height:1.15;color:var(--t-l)}
+.dh-tabs{display:flex;justify-content:center;gap:clamp(18px,2.6vw,44px);margin:clamp(20px,2.6vh,30px) 0 clamp(22px,3vh,34px);border-bottom:1px solid rgba(37,27,39,.12)}
+.dh-tab{position:relative;padding:12px 2px;font-size:13px;color:rgba(37,27,39,.5);transition:color .3s}
+.dh-tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1.5px;background:var(--t-l);transform:scaleX(0);transition:transform .45s var(--ease)}
+.dh-tab.on{color:var(--t-l)}.dh-tab.on::after{transform:scaleX(1)}
+.dh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;row-gap:clamp(30px,3.6vw,48px);width:100%}
+.dk{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.dc-img{display:block;width:100%;aspect-ratio:3/4;background:#EFEAE3;overflow:hidden}
+.dc-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.dk:hover .dc-img img{transform:scale(1.05)}
+.dc-name{margin-top:14px;font-size:12.5px;line-height:1.4;color:var(--t-l);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.8em;padding:0 6px}
+.dc-price{margin-top:6px;font-size:12px;color:#6d6266}
+.dc-add{margin-top:12px;display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 14px;background:#fff;border-radius:4px;font-size:11.5px;color:var(--t-l);box-shadow:0 1px 6px rgba(40,25,20,.1);transition:box-shadow .3s}
+.dc-add:hover{box-shadow:0 3px 14px rgba(40,25,20,.18)}
+.dc-add svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6}
+.dh-more{margin-top:clamp(24px,3.4vh,40px);font-size:12.5px;color:var(--t-l);border-bottom:1px solid currentColor;padding-bottom:3px}
+@media (max-width:820px){
+  .dh-side{margin:0;padding:clamp(48px,9vw,80px) 0;height:auto}
+  .dh-in{position:static;height:auto;padding:0 var(--gpad)}
+  .dh-grid{grid-template-columns:repeat(2,1fr);gap:8px;row-gap:28px}
+  .dh-tabs{gap:18px;overflow-x:auto;max-width:100%;justify-content:flex-start}
+}
+/* HEADER — hides on scroll down, returns on scroll up */
+header.hdr{transition:transform .55s var(--ease),background .5s var(--ease),top .5s var(--ease)}
+header.hdr.hide{transform:translateY(-140%)}
+
+/* HOLD — light version */
+.hold{background:#EFE6DA;color:var(--t-l)}
+.hs-vig{background:radial-gradient(75% 65% at 50% 50%,transparent 45%,rgba(120,84,48,.16)),linear-gradient(180deg,rgba(250,244,236,.35),transparent 30%)}
+.hs-head .sub{color:var(--gold-d)}
+.hs-head h2{color:var(--t-l)}
+.hs-head p{color:#6f5f55}
+.hs-blur b{background:linear-gradient(180deg,rgba(244,236,226,0) 0%,rgba(244,236,226,.3) 55%,rgba(244,236,226,.62) 100%)}
+.hs-tilt img{filter:drop-shadow(0 26px 30px rgba(92,62,36,.28))}
+.hs-glowb{background:radial-gradient(circle,rgba(255,236,200,.45),rgba(255,236,200,.1) 42%,transparent 66%)}
+.hs-lab{text-shadow:none}
+.hs-lab b{color:var(--t-l)}
+.hs-lab span{color:#6f5f55}
+.hs-lab .tbtn{color:var(--gold-d)}
+
+/* HOLD — grows from a card to full screen, holds for one scroll, then moves on */
+.hold{background:#F8F7F5;height:200vh;position:relative}
+.hold .hs{position:sticky;top:0;height:100vh;background:#EFE6DA;clip-path:inset(var(--ci,8%) var(--cx,12%) var(--ci,8%) var(--cx,12%) round var(--cr,10px));will-change:clip-path}
+@media (max-width:820px){.hold{height:170svh}.hold .hs{height:100svh}}
+
+/* FOOTER — light Dior-style panel floating on the dark newsletter ground */
+footer.fd{background:var(--ink);padding:clamp(14px,1.6vw,24px)}
+footer.fd>.wrap{background:#F6F4F1;border-radius:12px;padding:clamp(28px,3.6vw,56px) clamp(22px,3.4vw,56px) 22px;max-width:none}
+@media (max-width:820px){footer.fd>.wrap{border-radius:10px}}
+
+/* WHITE SPACE — Dior-like breathing room between sections */
+#main{background:#FCFAF7}
+.dh,.hold{background:#FCFAF7}
+/* dock cards: lifestyle photo fades in on hover */
+.dc-img{position:relative}
+.dc-img .pk,.dc-img .life{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dc-img .life{opacity:0;transform:scale(1.05);transition:opacity .8s var(--ease),transform 1.4s var(--ease)}
+.dk:hover .dc-img .life{opacity:1;transform:scale(1)}
+.dk:hover .dc-img .pk{transform:none}
+/* hold: hover a bottle — glow behind, stands straight and grows */
+.hs-tilt{transition:opacity 1.4s var(--ease),translate 1.6s var(--ease),transform .9s var(--ease)}
+.hs-bt:hover .hs-tilt,.hs-bt.grab .hs-tilt{transform:rotate(0deg) scale(1.1)}
+.hs-glowb{transition:opacity .8s var(--ease),transform .9s var(--ease);opacity:.55}
+.hs-bt:hover .hs-glowb,.hs-bt.grab .hs-glowb{opacity:1;transform:translate(-50%,-50%) scale(1.15);background:radial-gradient(closest-side,rgba(255,252,240,1) 0%,rgba(255,236,190,.95) 22%,rgba(236,184,104,.55) 46%,rgba(224,166,84,.18) 70%,transparent 100%);filter:blur(6px)}
+/* footer: one continuous dark ground with the newsletter; panel a shade lighter */
+footer.fd{background:var(--ink);padding:0 clamp(14px,1.6vw,24px) clamp(14px,1.6vw,24px);margin-top:-1px}
+footer.fd>.wrap{background:#21161C;color:#CDBFC6}
+.fd-perks,.fd-bar{border-color:rgba(240,230,235,.1)}
+.fd-perk{background:rgba(255,255,255,.05);border:1px solid rgba(240,230,235,.08)}
+.fd-perk b,.fd-nl h4,.fd-col h5,.fd-perk svg,.fd-country b,.fd-country svg,.fd-logo{color:#F4ECEF}
+.fd-perk span,.fd-col a,.fd-social,.fd-country{color:#BBADB4}
+.fd-col a:hover,.fd-social a:hover{color:#fff}
+.fd-ack,.fd-copy,.fd-social span{color:#8E7F87}
+.fd-sign input{background:rgba(255,255,255,.04);border-color:rgba(240,230,235,.2);color:#F4ECEF}
+.fd-sign input:focus{border-color:var(--gold-l)}
+.fd-sign button{background:var(--gold);color:#1a1013}
+.fd-sign button:hover{background:var(--gold-l)}
+.finale{padding-bottom:clamp(60px,7vw,100px)}
+.finale{position:relative}
+.finale::after{content:"";position:absolute;left:0;right:0;bottom:0;height:35%;background:linear-gradient(180deg,rgba(21,13,18,0),var(--ink));z-index:0;pointer-events:none}
 </style>
 </head>
 <body>
@@ -694,15 +1154,27 @@ header.hdr:has(.mm:hover){background:rgba(26,16,22,.98)}
 
 <main id="main"></main>
 
-<footer><div class="wrap">
-  <div class="f-grid">
-    <div><a href="#home" class="logo" aria-label="MYŚAA home" style="display:inline-block"><svg viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.6704 23.0104L3.32515 6.70776H0V27.4559H0.57095V8.61452L10.1981 27.4271L19.6565 7.93584V27.4559H23.0104V6.70776H19.6565L11.6704 23.0139V23.0104ZM36.2176 27.3194H39.8983V16.7658L49.116 6.59645H48.3512L39.6289 16.0584L31.0934 6.59645H27.1399L36.2176 16.9561V27.3194ZM64.1295 1.11317L63.5909 0L57.2207 3.36106L57.4469 3.84942L64.1295 1.11317ZM56.6102 18.0765C57.3392 18.2381 58.201 18.3961 59.2028 18.5397C61.8924 18.9383 63.8027 19.4087 64.9303 19.9581C66.5821 20.7014 67.4116 21.6494 67.4116 22.7913C67.4116 23.4305 67.2643 23.9763 66.9735 24.4287C66.855 24.6191 66.7221 24.8058 66.5713 24.9782L66.5605 24.9638C64.2121 27.1686 60.8475 27.5815 57.7521 27.0824C57.3966 27.0321 57.0339 26.9675 56.682 26.8777C54.7286 26.4181 52.9296 25.4198 52.4197 23.7537C52.1898 23.0175 52.2114 22.1485 52.5848 21.1359L52.1288 21.0102C52.0211 21.3873 51.8882 21.8002 51.8451 22.2239C51.7661 22.8883 51.8307 23.4844 52.0103 24.023C52.0749 24.2205 52.1575 24.4108 52.2509 24.5903C52.2545 24.5939 52.2545 24.5975 52.2581 24.6011C53.2958 26.5474 56.0141 27.5528 58.7899 27.8257C58.8114 27.8293 58.8366 27.8329 58.8581 27.8329C59.3788 27.894 59.9246 27.9227 60.4884 27.9227C62.194 27.9227 63.7561 27.6462 65.1745 27.0896C66.5928 26.533 67.7204 25.7897 68.5535 24.8525C69.3902 23.9224 69.8067 22.8775 69.8067 21.732C69.8067 20.8235 69.6272 20.0479 69.2609 19.4123C68.8982 18.7803 68.4062 18.2488 67.7886 17.8179C67.171 17.3942 66.4672 17.0423 65.6772 16.7694C64.8836 16.4965 64.0649 16.2667 63.2102 16.0764C62.3556 15.8861 61.501 15.7209 60.6464 15.5736C59.6445 15.4085 58.7288 15.2289 57.8957 15.0242C56.6246 14.7513 55.6443 14.2881 54.962 13.6382C54.2797 12.981 53.9135 12.2377 53.8596 11.401C53.8596 10.0545 54.6963 8.94129 56.366 8.04716C57.3356 7.52648 58.3913 7.19612 59.5332 7.05967C59.824 7.02017 60.1221 6.99862 60.4309 6.98785C61.7164 6.98785 62.8763 7.14585 63.9105 7.46185C63.9141 7.46544 63.9176 7.46544 63.9212 7.46544C65.6305 7.90712 67.1961 8.76175 67.8353 10.1263C68.2231 10.945 68.277 11.954 67.8317 13.1642L68.2878 13.2898C68.3955 12.9128 68.5283 12.5034 68.5714 12.0761C68.6612 11.3472 68.575 10.7008 68.3488 10.1227C68.2734 9.91083 68.1728 9.71333 68.0508 9.51942C67.2643 8.52834 66.2661 7.79221 65.0524 7.31103C64.2588 6.99862 63.458 6.77599 62.6465 6.63594H62.6608C62.5998 6.62517 62.5387 6.61799 62.4813 6.60722C62.4131 6.59645 62.3448 6.58567 62.2766 6.5749C60.3591 6.28763 58.2297 6.55335 56.7682 7.02017H56.8149C56.6856 7.05608 56.5563 7.0884 56.4307 7.13149C56.2727 7.18535 56.1183 7.24639 55.9639 7.30744C54.98 7.70962 54.1397 8.21234 53.4466 8.8192C53.1953 9.03824 52.9583 9.27165 52.7464 9.51942C51.9492 10.4423 51.5507 11.4693 51.5507 12.5968V12.981C51.5507 15.6347 53.2384 17.3296 56.6174 18.0801L56.6102 18.0765ZM72.6363 27.4271H73.1821L76.6689 20.6655H87.1111L90.7092 27.4523H94.3073L83.3479 6.70417L72.6327 27.4235L72.6363 27.4271ZM76.8879 20.2813L81.8505 10.7116L86.9244 20.2813H76.8915H76.8879ZM109.044 6.70776L98.329 27.4271H98.8749L102.362 20.6655H112.804L116.402 27.4523H120L109.041 6.70417L109.044 6.70776ZM102.584 20.2813L107.547 10.7116L112.621 20.2813H102.588H102.584Z" fill="currentColor"/></svg></a><p style="margin-top:20px;max-width:36ch">Secrets. Serenity. Radiance. Certified organic skincare from the Himalayas, made in small batches.</p>
-      <form class="f-sign js-sign" novalidate><label class="sr" for="fEmail">Email</label><input id="fEmail" type="email" placeholder="Your email address"><button class="btn btn-ivory" type="submit">Join</button></form><p class="js-sign-msg" style="margin-top:10px;color:var(--gold-l)"></p></div>
-    <div><h5>Shop</h5><ul><li><a href="#shop">All products</a></li><li><a href="#rituals">Rituals &amp; sets</a></li><li><a href="#product-radiance-elixir">Radiance Elixir</a></li><li><a href="#product-aurora-bloom">Aurora Bloom</a></li></ul></div>
-    <div><h5>House</h5><ul><li><a href="#story">Our story</a></li><li><a href="#journal">Journal</a></li><li><a href="#home" data-goto="awards">Awards</a></li><li><a href="#home" data-goto="press">Press</a></li></ul></div>
-    <div><h5>Help</h5><ul><li><a href="#home">Shipping &amp; returns</a></li><li><a href="#contact">Contact</a></li><li><a href="#home">FAQ</a></li><li><a href="#home">Privacy policy</a></li></ul></div>
+<footer class="fd"><div class="wrap">
+  <div class="fd-perks">
+    <a href="#home" class="fd-perk"><div><b>Complimentary shipping</b><span>On Australian orders over $150, dispatched from Perth within two days.</span></div><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+    <a href="#rituals" class="fd-perk"><div><b>Two samples, every order</b><span>Hand-chosen to suit your ritual, tucked into every parcel.</span></div><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+    <a href="#contact" class="fd-perk"><div><b>Wrapped by hand</b><span>Add gift wrapping and a handwritten note at checkout.</span></div><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
   </div>
-  <div class="ack"><p style="max-width:70ch">[Acknowledgement of Country wording to be supplied by MYŚAA.]</p><p>© 2026 MYŚAA Secrets · Prices in AUD, other currencies indicative</p></div>
+  <div class="fd-nl"><h4>Newsletter</h4>
+    <form class="fd-sign js-sign" novalidate><label class="sr" for="fEmail">Email address</label><input id="fEmail" type="email" placeholder="Email address"><button type="submit">Confirm</button></form><p class="js-sign-msg fd-msg"></p></div>
+  <div class="fd-cols">
+    <div class="fd-col"><h5>Find us</h5><ul><li><a href="#contact">Stockists</a></li><li><a href="#contact">Spa &amp; salon partners</a></li><li><a href="#contact">Wholesale enquiries</a></li></ul></div>
+    <div class="fd-col"><h5>Client care</h5><ul><li><a href="#contact">Contact us</a></li><li><a href="#home">Shipping<svg class="fd-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a></li><li><a href="#home">Returns<svg class="fd-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a></li><li><a href="#home">FAQ</a></li><li><a href="#home">Track your order</a></li><li><a href="#home">Gift card<svg class="fd-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a></li></ul></div>
+    <div class="fd-col"><h5>The House</h5><ul><li><a href="#story">Our story</a></li><li><a href="#story">Sustainability<svg class="fd-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a></li><li><a href="#home" data-goto="awards">Awards</a></li><li><a href="#home" data-goto="press">Press</a></li><li><a href="#journal">Journal</a></li></ul></div>
+    <div class="fd-col"><h5>Legal</h5><ul><li><a href="#home">Terms &amp; conditions</a></li><li><a href="#home">Privacy policy</a></li><li><a href="#home">Cookie preferences</a></li><li><a href="#home">Accessibility</a></li><li><a href="#home">Sitemap</a></li></ul></div>
+  </div>
+  <p class="fd-ack">[Acknowledgement of Country wording to be supplied by MYŚAA.]</p>
+  <div class="fd-bar">
+    <div class="fd-social"><span>Follow us :</span><a href="#home">Instagram</a><a href="#home">TikTok</a><a href="#home">Facebook</a><a href="#home">Pinterest</a></div>
+    <a href="#home" class="fd-logo" aria-label="MYŚAA home"><svg viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.6704 23.0104L3.32515 6.70776H0V27.4559H0.57095V8.61452L10.1981 27.4271L19.6565 7.93584V27.4559H23.0104V6.70776H19.6565L11.6704 23.0139V23.0104ZM36.2176 27.3194H39.8983V16.7658L49.116 6.59645H48.3512L39.6289 16.0584L31.0934 6.59645H27.1399L36.2176 16.9561V27.3194ZM64.1295 1.11317L63.5909 0L57.2207 3.36106L57.4469 3.84942L64.1295 1.11317ZM56.6102 18.0765C57.3392 18.2381 58.201 18.3961 59.2028 18.5397C61.8924 18.9383 63.8027 19.4087 64.9303 19.9581C66.5821 20.7014 67.4116 21.6494 67.4116 22.7913C67.4116 23.4305 67.2643 23.9763 66.9735 24.4287C66.855 24.6191 66.7221 24.8058 66.5713 24.9782L66.5605 24.9638C64.2121 27.1686 60.8475 27.5815 57.7521 27.0824C57.3966 27.0321 57.0339 26.9675 56.682 26.8777C54.7286 26.4181 52.9296 25.4198 52.4197 23.7537C52.1898 23.0175 52.2114 22.1485 52.5848 21.1359L52.1288 21.0102C52.0211 21.3873 51.8882 21.8002 51.8451 22.2239C51.7661 22.8883 51.8307 23.4844 52.0103 24.023C52.0749 24.2205 52.1575 24.4108 52.2509 24.5903C52.2545 24.5939 52.2545 24.5975 52.2581 24.6011C53.2958 26.5474 56.0141 27.5528 58.7899 27.8257C58.8114 27.8293 58.8366 27.8329 58.8581 27.8329C59.3788 27.894 59.9246 27.9227 60.4884 27.9227C62.194 27.9227 63.7561 27.6462 65.1745 27.0896C66.5928 26.533 67.7204 25.7897 68.5535 24.8525C69.3902 23.9224 69.8067 22.8775 69.8067 21.732C69.8067 20.8235 69.6272 20.0479 69.2609 19.4123C68.8982 18.7803 68.4062 18.2488 67.7886 17.8179C67.171 17.3942 66.4672 17.0423 65.6772 16.7694C64.8836 16.4965 64.0649 16.2667 63.2102 16.0764C62.3556 15.8861 61.501 15.7209 60.6464 15.5736C59.6445 15.4085 58.7288 15.2289 57.8957 15.0242C56.6246 14.7513 55.6443 14.2881 54.962 13.6382C54.2797 12.981 53.9135 12.2377 53.8596 11.401C53.8596 10.0545 54.6963 8.94129 56.366 8.04716C57.3356 7.52648 58.3913 7.19612 59.5332 7.05967C59.824 7.02017 60.1221 6.99862 60.4309 6.98785C61.7164 6.98785 62.8763 7.14585 63.9105 7.46185C63.9141 7.46544 63.9176 7.46544 63.9212 7.46544C65.6305 7.90712 67.1961 8.76175 67.8353 10.1263C68.2231 10.945 68.277 11.954 67.8317 13.1642L68.2878 13.2898C68.3955 12.9128 68.5283 12.5034 68.5714 12.0761C68.6612 11.3472 68.575 10.7008 68.3488 10.1227C68.2734 9.91083 68.1728 9.71333 68.0508 9.51942C67.2643 8.52834 66.2661 7.79221 65.0524 7.31103C64.2588 6.99862 63.458 6.77599 62.6465 6.63594H62.6608C62.5998 6.62517 62.5387 6.61799 62.4813 6.60722C62.4131 6.59645 62.3448 6.58567 62.2766 6.5749C60.3591 6.28763 58.2297 6.55335 56.7682 7.02017H56.8149C56.6856 7.05608 56.5563 7.0884 56.4307 7.13149C56.2727 7.18535 56.1183 7.24639 55.9639 7.30744C54.98 7.70962 54.1397 8.21234 53.4466 8.8192C53.1953 9.03824 52.9583 9.27165 52.7464 9.51942C51.9492 10.4423 51.5507 11.4693 51.5507 12.5968V12.981C51.5507 15.6347 53.2384 17.3296 56.6174 18.0801L56.6102 18.0765ZM72.6363 27.4271H73.1821L76.6689 20.6655H87.1111L90.7092 27.4523H94.3073L83.3479 6.70417L72.6327 27.4235L72.6363 27.4271ZM76.8879 20.2813L81.8505 10.7116L86.9244 20.2813H76.8915H76.8879ZM109.044 6.70776L98.329 27.4271H98.8749L102.362 20.6655H112.804L116.402 27.4523H120L109.041 6.70417L109.044 6.70776ZM102.584 20.2813L107.547 10.7116L112.621 20.2813H102.588H102.584Z" fill="currentColor"/></svg></a>
+    <button class="fd-country" type="button"><span>Choose your country or region &amp; currency</span><b>Australia<br>(AUD)</b><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+  </div>
+  <p class="fd-copy">© 2026 MYŚAA Pty Ltd · Prices in AUD, other currencies indicative</p>
 </div></footer>
 
 <div class="scrim" id="scrim"></div>
@@ -728,28 +1200,26 @@ header.hdr:has(.mm:hover){background:rgba(26,16,22,.98)}
 <script src="data.js"></script>
 <script>
 const W='MY<span class="sa">S</span>AA';
-const TINT={"radiance-elixir":"#E8E1D8","aurora-bloom":"#E6E0DB","ageless-oasis":"#E8DEDC","celestial-glow":"#E4E1DC","serene-flora":"#E0E0E6","serene-reishi":"#E2DCE4","twilight-whispers":"#DFDAE5","floral-harmony":"#E8DEE0","glow-guardian":"#E5E3DA","tranquil-touch":"#DDD7E2","brewed-bliss":"#E6E0D9","rose-plum":"#E8DCE1"};
-const ING={"radiance-elixir":"24K gold & saffron","aurora-bloom":"Rosehip","ageless-oasis":"Saffron strands","celestial-glow":"Turmeric","serene-flora":"Blue lotus","serene-reishi":"Reishi mushroom","twilight-whispers":"Marigold & vetiver","floral-harmony":"Rose & geranium","glow-guardian":"Pomegranate","tranquil-touch":"Rose & sesame","brewed-bliss":"Coffee & beetroot","rose-plum":"Malabar plum"};
+const TINT={"radiance-elixir":"#EEE6D9","aurora-bloom":"#EEE6D9","ageless-oasis":"#EEE6D9","celestial-glow":"#EEE6D9","lifting-serum":"#EEE6D9","longevity-serum":"#EEE6D9","eye-creme":"#EEE6D9","triphase-essence":"#EEE6D9","serene-flora":"#EEE6D9","twilight-whispers":"#EEE6D9","floral-harmony":"#EEE6D9","gel-mask":"#EEE6D9","mud":"#EEE6D9","body-essence":"#EEE6D9","lip-oil":"#EEE6D9","rose-plum":"#EEE6D9"};
+const ING={"radiance-elixir":"24K gold & saffron","aurora-bloom":"Bakuchi & saffron","ageless-oasis":"Pomegranate & saffron","celestial-glow":"Turmeric & sandalwood","lifting-serum":"Bakuchi & bearberry","longevity-serum":"Kumkumadi & gold","eye-creme":"Colloidal gold & loban","triphase-essence":"Saffron & Fermentologie 21","serene-flora":"Licorice","twilight-whispers":"Vetiver & calendula","floral-harmony":"Guava & rose","gel-mask":"Calendula & saffron","mud":"Sandalwood & rose honey","body-essence":"Apricot & gold","lip-oil":"Rosehip & lychee","rose-plum":"Mango & Malabar plum"};
 const BADGE={"radiance-elixir":"cc-2025-gold","aurora-bloom":"cc-2026-over50","ageless-oasis":"cc-2026-over40","celestial-glow":"she-2024-finalist","rose-plum":"she-2024-editors"};
-const JAR=new Set(["aurora-bloom","rose-plum","brewed-bliss","tranquil-touch","glow-guardian"]);
-const RATE={"radiance-elixir":[4.9,15],"aurora-bloom":[5,12],"ageless-oasis":[5,5],"celestial-glow":[5,15],"twilight-whispers":[5,5],"tranquil-touch":[5,2],"floral-harmony":[5,8],"serene-flora":[5,6]};
+const JAR=new Set([]);
+const RATE={"radiance-elixir":[4.9,15],"aurora-bloom":[5,12],"ageless-oasis":[5,5],"celestial-glow":[5,15],"twilight-whispers":[5,5],"floral-harmony":[5,8],"serene-flora":[5,6]};
 const R=[
- {id:"ageless-saffron-ritual",name:"Ageless Saffron Ritual",cat:"ritual",type:"Ritual of three",price:319,inc:["celestial-glow","radiance-elixir","ageless-oasis"],img:"bundle-ageless-saffron",line:"Firm, restore and illuminate. Saffron from the first cleanse to the last drop of night oil, for skin that wants its glow back."},
- {id:"hydration-collagen-trio",name:"Hydration & Collagen Boost Trio",cat:"ritual",type:"Ritual of three",price:319,inc:["celestial-glow","radiance-elixir","aurora-bloom"],img:"bundle-hydration-collagen",line:"Hydrate, plump and support collagen renewal. Skin feels supple, smooth and luminous."},
- {id:"repair-brighten-trio",name:"Repair & Brighten Trio",cat:"ritual",type:"Ritual of three",price:299,inc:["twilight-whispers","radiance-elixir","aurora-bloom"],img:"bundle-repair-brighten",line:"Calm, replenish and brighten from within. A mist, a gold oil and a night cream, in that order."},
- {id:"cleanse-protect-ritual",name:"Cleanse & Protect Ritual",cat:"ritual",type:"Ritual of three",price:199,inc:["celestial-glow","floral-harmony","serene-flora"],img:"bundle-cleanse-protect",line:"Cleanse, refine and restore. Three steps for oily and breakout-prone skin that still wants to feel cared for."},
- {id:"timeless-bio-radiance",name:"Timeless Bio-Radiance Ritual",cat:"ritual",type:"Ritual of two",price:189,inc:["ageless-oasis","aurora-bloom"],img:"bundle-timeless-bio-radiance",line:"A regenerative duo. Ageless Oasis restores overnight and Aurora Bloom seals it in."},
- {id:"lips-hands-ritual",name:"Restoring Lips & Hands Ritual",cat:"ritual",type:"Ritual of three",price:79,inc:["brewed-bliss","rose-plum","tranquil-touch"],img:"bundle-lips-hands",line:"Exfoliate, replenish and protect the places most often overlooked."}
+ {id:"morning-ritual",name:"The Morning Ritual",cat:"ritual",type:"Ritual of four",price:349,inc:["celestial-glow","floral-harmony","lifting-serum","aurora-bloom"],img:"r-morning",when:"Morning",line:"Cleanse, mist, lift and seal. Four steps that build resilience before the day begins."},
+ {id:"evening-ritual",name:"The Evening Ritual",cat:"ritual",type:"Ritual of three",price:409,inc:["longevity-serum","radiance-elixir","eye-creme"],img:"r-evening",when:"Evening",line:"The hours you do the least for your skin, made to count. Wake to skin that looks rested and even."},
+ {id:"reset-ritual",name:"The Weekly Reset",cat:"ritual",type:"Ritual of two",price:149,inc:["mud","gel-mask"],img:"r-reset",when:"Once a week",line:"Clear the way, then calm it down. Resurface with the mud, then restore with the gel mask."},
+ {id:"lips-body-ritual",name:"Lips & Body",cat:"ritual",type:"Ritual of three",price:159,inc:["body-essence","lip-oil","rose-plum"],img:"r-lipsbody",when:"Every day",line:"The places most often overlooked, given the same care as your face."}
 ];
-const SKIN={"radiance-elixir":["combination","dry","normal","oily"],"aurora-bloom":["combination","dry","normal"],"celestial-glow":["combination","dry","normal","oily"],"ageless-oasis":["dry"],"twilight-whispers":["dry","normal"],"floral-harmony":["combination","dry","normal","oily"],"serene-reishi":["combination","normal","oily"],"serene-flora":["combination","normal","oily"]};
-const CONCERN={"radiance-elixir":["dry","fine","kind","sensitive","uneven"],"aurora-bloom":["dry","fine","kind","sensitive","uneven"],"celestial-glow":["breakouts","dry","fine","kind","sensitive","uneven"],"rose-plum":["dry","kind"],"ageless-oasis":["dry","fine"],"twilight-whispers":["dry","fine","kind"],"floral-harmony":["breakouts","kind","sensitive","uneven"],"serene-reishi":["fine","kind","uneven"],"serene-flora":["breakouts","kind","sensitive"],"tranquil-touch":["kind"],"brewed-bliss":["dry","kind"]};
-const GRP={"radiance-elixir":"oils","ageless-oasis":"oils","aurora-bloom":"moist","serene-flora":"moist","serene-reishi":"moist","glow-guardian":"moist","celestial-glow":"cleanse","twilight-whispers":"cleanse","floral-harmony":"cleanse","brewed-bliss":"lips","rose-plum":"lips","tranquil-touch":"lips"};
-const GRP_N=[["oils","Face oils & serums","24K gold, saffron and slow-infused oils"],["moist","Moisturisers","Night creams, mousse and daily care"],["cleanse","Cleanse & mist","The first steps of the ritual"],["lips","Lips & hands","Small comforts, kept close"]];
+const SKIN={"radiance-elixir":["combination","dry","normal","oily"],"aurora-bloom":["combination","dry","normal","oily"],"celestial-glow":["combination","dry","normal","oily"],"ageless-oasis":["dry","normal"],"twilight-whispers":["dry","normal"],"floral-harmony":["combination","dry","normal","oily"],"serene-flora":["combination","normal","oily"],"lifting-serum":["combination","dry","normal","oily"],"longevity-serum":["combination","dry","normal","oily"],"eye-creme":["combination","dry","normal","oily"],"triphase-essence":["combination","dry","normal","oily"],"gel-mask":["combination","dry","normal","oily"],"mud":["combination","normal","oily"]};
+const CONCERN={"radiance-elixir":["dry","fine","kind","uneven"],"aurora-bloom":["dry","fine","kind","sensitive"],"celestial-glow":["breakouts","dry","kind","sensitive","uneven"],"rose-plum":["dry","kind"],"lip-oil":["dry","kind"],"ageless-oasis":["dry","fine"],"twilight-whispers":["dry","kind","sensitive"],"floral-harmony":["breakouts","kind","uneven"],"serene-flora":["breakouts","kind","sensitive"],"lifting-serum":["fine","kind"],"longevity-serum":["fine","uneven"],"eye-creme":["fine","kind"],"triphase-essence":["dry","fine","uneven"],"gel-mask":["dry","sensitive","kind"],"mud":["breakouts","uneven"],"body-essence":["dry","kind"]};
+const GRP={"radiance-elixir":"oils","ageless-oasis":"oils","lifting-serum":"oils","longevity-serum":"oils","triphase-essence":"oils","aurora-bloom":"moist","serene-flora":"moist","eye-creme":"moist","celestial-glow":"cleanse","twilight-whispers":"cleanse","floral-harmony":"cleanse","gel-mask":"masks","mud":"masks","body-essence":"lips","lip-oil":"lips","rose-plum":"lips"};
+const GRP_N=[["oils","Serums, oils & essences","Slow-infused saffron, gold and kumkumadi"],["moist","Moisturisers & eye","Daily crèmes and eye care"],["cleanse","Cleanse & mist","The first steps of the ritual"],["masks","Masks","The weekly reset"],["lips","Lips & body","Small comforts, kept close"]];
 const SKIN_N=[["dry","Dry skin"],["normal","Normal skin"],["combination","Combination skin"],["oily","Oily skin"]];
 const CONCERN_N=[["dry","Dry & dehydrated skin"],["sensitive","Sensitive & redness"],["uneven","Uneven tone & spots"],["breakouts","Breakouts & acne-prone"],["fine","Fine lines, firmness & dullness"],["kind","Kind maintenance"]];
 const ALL=[...P,...R];
 const byId=id=>ALL.find(x=>x.id===id);
-const img=n=>"img/"+n+".jpg";
+const img=n=>"photos/"+n+".jpg";
 const cut=id=>"img/p/"+id+".webp";
 const worth=r=>r.inc.reduce((s,i)=>s+byId(i).price,0);
 const thumbOf=p=>p.cat==="ritual"?img(p.img):cut(p.id);
@@ -759,10 +1229,10 @@ const JOURNEY=[
  ["journey-1","It begins in the Himalayan foothills.","Wild roses, saffron and mountain herbs, grown where the air is clean and the seasons are honest.","The foothills"],
  ["journey-2","Gathered by hand, at first light.","Saffron is picked flower by flower, before the sun warms the petals.","The harvest"],
  ["journey-3","Cold-pressed, never rushed.","Oils are pressed in-house, slowly, so the botanicals arrive whole.","The press"],
- ["journey-4","Infused for twenty days.","Radiance Elixir rests with eighteen herbs and real gold for twenty days before it is ready.","The infusion"],
+ ["journey-4","Infused for twenty days.","Our gold oil serum rests with eighteen herbs and real gold for twenty days before it is ready.","The infusion"],
  ["journey-5","Poured in small batches.","Each batch is filled and finished by hand, never by the thousand.","The batch"],
  ["hero-2","And finished on your vanity.","Where the ritual becomes yours.","Your vanity"]];
-const PRESS=[["natural-parent","Natural Parent","Certified organic skincare, gentle from the start"],["professional-beauty","Professional Beauty","The new cult ritual: saffron and gold-infused heritage skincare"],["style","Style Magazine","Feelin’ fresh: Floral Harmony Garden, January 2025"],["cream","Cream Magazine","The ‘Gift to Yourself’ collection"],["loael","LOAEL.org","Certified organic · Organic Beauty Award verified member"],["the-paige","The Paige","Tranquil Touch, a hand cream that feels like a spa treatment"]];
+const PRESS=[["natural-parent","Natural Parent","Certified organic skincare, gentle from the start"],["professional-beauty","Professional Beauty","The new cult ritual: saffron and gold-infused heritage skincare"],["style","Style Magazine","Feelin’ fresh: our brightening toning mist, January 2025"],["cream","Cream Magazine","The ‘Gift to Yourself’ collection"],["loael","LOAEL.org","Certified organic · Organic Beauty Award verified member"],["the-paige","The Paige","A spa treatment you can keep on your vanity"]];
 const CERTS=[["COSMOS Organic","cosmos"],["ISO Certified","iso"],["GMP Certified","gmp"],["Vegan","vegan"],["Cruelty-free","bunny"],["Non-comedogenic","pore"],["Dermatologically tested","derm"]];
 const ICON={
  cosmos:'<circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="13.5" stroke-dasharray="1.4 2.2"/><path d="M20 29V14"/><path d="M20 22c-4.4 0-7-2.6-7-6.6 4.2 0 7 2.5 7 6.6z"/><path d="M20 18.5c3.9 0 6.4-2.4 6.4-6.1-3.8 0-6.4 2.3-6.4 6.1z"/>',
@@ -774,9 +1244,9 @@ const ICON={
  derm:'<rect x="10" y="8" width="20" height="26" rx="2"/><path d="M16 8V5.5h8V8"/><path d="M14.5 21.5l4 4 7.5-8.5"/>'
 };
 const NEW=[["new-glow-oil-1","Glow Oil"],["new-gold-oil-serum-2","Gold Oil Serum"],["new-evergene-eye-cream-2","Evergene Eye Crème"],["new-hydrating-cleanser-2","Hydrating Cleanser"],["new-cell-renewal-toning-mist-1","Cell Renewal Mist"],["new-botanic-calm-moisturiser-1","Botanic Calm Moisturiser"],["new-pure-gold-body-essence-2","Pure Gold Body Essence"],["new-absolute-brilliance-cream-1","Absolute Brilliance Cream"]];
-const HERO=[{img:"hero-1",items:["celestial-glow","radiance-elixir","aurora-bloom","floral-harmony","ageless-oasis"]},{img:"hero-2",items:["ageless-oasis","radiance-elixir","aurora-bloom","rose-plum"]},{img:"hero-3",items:["twilight-whispers","serene-reishi","celestial-glow","tranquil-touch"]}];
-const RV_PICK=[["radiance-elixir","Carol"],["aurora-bloom","Jane Thompson"],["celestial-glow","Melody"],["ageless-oasis","Esther"],["floral-harmony","Nancy Trieu"],["serene-flora","Sunayana Menon"],["radiance-elixir","Aliah"],["tranquil-touch","Carol"],["twilight-whispers","Sarah"],["celestial-glow","Lee-Ann De Wet"]];
-const RV_IMG={"radiance-elixir":"oil-drop","aurora-bloom":"cream-touch","celestial-glow":"skin-neck","ageless-oasis":"oil-swipe","floral-harmony":"foliage-glass","serene-flora":"her-portrait","tranquil-touch":"hand-oil","twilight-whispers":"violet-light"};
+const HERO=[{img:"hero-greenhouse",items:["celestial-glow","radiance-elixir","triphase-essence"]},{img:"hero-slab",items:["radiance-elixir","ageless-oasis","triphase-essence","aurora-bloom"]},{img:"hero-vanity",items:["serene-flora","lifting-serum","floral-harmony"]},{img:"hero-pouch",items:["eye-creme","aurora-bloom"]}];
+const RV_PICK=[["radiance-elixir","Carol"],["aurora-bloom","Jane Thompson"],["celestial-glow","Melody"],["ageless-oasis","Esther"],["floral-harmony","Nancy Trieu"],["serene-flora","Sunayana Menon"],["radiance-elixir","Aliah"],["twilight-whispers","Sarah"],["celestial-glow","Lee-Ann De Wet"]];
+const RV_IMG={"radiance-elixir":"l-bed","aurora-bloom":"l-vanity","celestial-glow":"r-morning","ageless-oasis":"l-oildrop","floral-harmony":"l-mist","serene-flora":"l-portrait","twilight-whispers":"l-tennis"};
 const ARR='<span class="ar">→</span>';
 
 /* STATE */
@@ -801,11 +1271,12 @@ const GF='<div class="gf" aria-hidden="true"><i></i><i></i><i></i></div>';
 /* COMPONENTS */
 function pcard(p){
   const rit=p.cat==="ritual";
+  const life=rit?"":(p.mood&&p.mood[0]);
   const media=rit?`<img class="cover" src="${img(p.img)}" alt="${p.name}" loading="lazy">`
-    :`<img class="ing" src="img/ing/${p.id}.jpg" alt="" loading="lazy"><img class="cut ${JAR.has(p.id)?"jar":""}" src="${cut(p.id)}" alt="${p.name}, ${p.type}" loading="lazy"><span class="chip">Star ingredient · ${ING[p.id]}</span>`;
-  const top=p.soldout?`<span class="tag">Sold out</span>`:BADGE[p.id]?`<img class="award" src="img/award/${BADGE[p.id]}.png" alt="Award">`:rit?`<span class="tag">Save ${money(worth(p)-p.price)}</span>`:"";
+    :`<img class="pk" src="${cut(p.id)}" alt="${p.name}, ${p.type}" loading="lazy">${life?`<img class="life" src="${img(life)}" alt="" loading="lazy">`:""}`;
+  const top=p.soldout?`<span class="tag">Sold out</span>`:p.isNew?`<span class="tag tag-new">New</span>`:BADGE[p.id]?`<img class="award" src="img/award/${BADGE[p.id]}.png" alt="Award">`:rit?`<span class="tag">Save ${money(worth(p)-p.price)}</span>`:"";
   const rate=RATE[p.id]?`<span class="stars">★★★★★</span> <span class="rc">(${RATE[p.id][1]})</span>`:"";
-  return `<article class="pcard reveal" style="--tint:${rit?"#E4E0DD":TINT[p.id]}">
+  return `<article class="pcard reveal">
     <a href="#product-${p.id}" class="pc-media" aria-label="${p.name}">${top}${media}</a>
     <div class="pc-info">
       <div class="pc-l1"><a href="#product-${p.id}">${p.name}</a></div>
@@ -816,29 +1287,75 @@ function pcard(p){
 }
 
 /* HOME */
+const B3D=["celestial-glow","triphase-essence","floral-harmony"];
+const DT_SMALL=["Who it is for —","she notices what everyone","is buying, then decides","for herself."];
+const DT_BIG=["her taste is","not an algorithm.","formulas found,","not pushed, for a","ritual all her own."];
+const LU_ROW=[["l-tennis","twilight-whispers"],["l-pouch","lip-oil"],["l-bed","radiance-elixir"],["l-body","body-essence"]];
+const LU_IMG={oils:"l-oildrop",moist:"l-vanity",cleanse:"l-mist",masks:"r-reset",lips:"r-lipsbody"};
+function luBody(i){const g=GRP_N[i],list=P.filter(p=>GRP[p.id]===g[0]);
+  return `<div class="lu-big"><img src="${img(LU_IMG[g[0]])}" alt="${g[1]}" loading="lazy"></div>
+  <div class="lu-side"><div class="lu-grid">${list.map(p=>`<a href="#product-${p.id}" class="lu-p"><img src="${cut(p.id)}" alt="${p.name}" loading="lazy"><span><b>${p.name}</b>${money(p.price)}</span></a>`).join("")}</div>
+  <div class="lu-txt"><div class="sub gold">0${i+1} · ${g[1]}</div><p>${g[2]}. ${list.length} formulas, each slow-made in small batches with Himalayan botanicals.</p><a class="btn btn-ink" href="#shop-grp-${g[0]}">Shop ${g[1].toLowerCase()} ${ARR}</a></div></div>`;}
 function viewHome(){
   return `
-  <section class="hero" id="hero">
+  <section class="dh" id="dock">
+  <div class="dh-pin">
+  <section class="hero hero-min" id="hero">
     ${HERO.map((h,i)=>`<div class="slide ${i?"":"on"}" data-i="${i}"><img src="${img(h.img)}" alt="${h.items.map(x=>byId(x).name).join(", ")} in warm golden light" ${i?'loading="lazy"':'fetchpriority="high"'}></div>`).join("")}
     <div class="glow"></div><canvas id="dust"></canvas>
     <div class="hero-top"><div class="wrap">
-      <div class="sub gold">Himalayan botanicals · Certified organic</div>
-      <h1 class="h-xl">The quiet luxury of Himalayan gold.</h1>
-      <p class="lede hero-lede">Slow-infused in small batches with saffron, rose and real gold. Skincare you can look forward to.</p>
+      <div class="sub gold hr-fade">Himalayan botanicals · Certified organic</div>
+      <h1 class="h-xl hr-words">${"The quiet luxury of Himalayan gold.".split(" ").map(w=>`<span class="hw"><span>${w}</span></span>`).join(" ")}</h1>
+      <p class="lede hero-lede hr-fade">Slow-infused in small batches with saffron, rose and real gold.</p>
+      <div class="ctas hr-fade"><a href="#home" data-goto="collection" class="btn btn-ivory">Shop the collection ${ARR}</a></div>
     </div></div>
-    <div class="hero-bot"><div class="wrap">
-      <div class="ctas"><a href="#home" data-goto="collection" class="btn btn-ivory">Shop bestsellers ${ARR}</a><a href="#home" data-goto="rituals" class="btn btn-line-d">Find your ritual</a></div>
-      <div class="in-scene"><div class="names" id="inScene"></div><div class="dots" id="dots">${HERO.map((h,i)=>`<button class="${i?"":"on"}" data-slide="${i}" aria-label="Scene ${i+1}"><i></i></button>`).join("")}</div></div>
-    </div></div>
+    <div class="hero-bot"><div class="wrap"><div class="in-scene"><div class="names" id="inScene"></div><div class="dots" id="dots">${HERO.map((h,i)=>`<button class="${i?"":"on"}" data-slide="${i}" aria-label="Scene ${i+1}"><i></i></button>`).join("")}</div></div></div></div>
+  </section>
+  </div>
+  <div class="dh-side"><div class="dh-in">
+    <div class="dh-head" id="collection"><div class="sub gold">The collection</div><h2 class="dh-title">Chosen once, then again and again.</h2></div>
+    <div class="dh-tabs" role="tablist">${[["best","Bestsellers"],["new","New"],["face","Face"],["body","Lips & body"]].map((t,i)=>`<button class="dh-tab ${i?"":"on"}" data-hometab="${t[0]}" role="tab">${t[1]}</button>`).join("")}</div>
+    <div class="dh-grid" id="homeGrid"></div>
+    <a href="#shop" class="dh-more">Discover the collection</a>
+  </div></div>
   </section>
 
-  <div class="trust"><div class="wrap"><span>COSMOS organic</span><span>Small batch</span><span>Kashmiri saffron</span><span>Vegan &amp; cruelty-free</span><span>SHE-com award-winning</span><span>Ships from Australia</span></div></div>
 
-  <section class="light" id="collection" style="padding:clamp(70px,8vw,120px) 0 8px">
-    <div style="padding:0 var(--gpad)"><div class="sec-head"><div><div class="sub gold">The collection</div><h2 class="h-l reveal" style="max-width:16ch">Chosen once, then again and again.</h2></div></div></div>
-    <div class="col-tabs" role="tablist">${[["best","Bestsellers"],["face","Face"],["mist","Mists"],["body","Lips & hands"],["ritual","Rituals"]].map((t,i)=>`<button class="col-tab ${i?"":"on"}" data-hometab="${t[0]}" role="tab">${t[1]}</button>`).join("")}<a href="#shop" class="link">Shop all</a></div>
-    <div class="grid bleed" id="homeGrid"></div>
-    <div style="height:var(--gpad)"></div>
+  <section class="hold" id="hold"><div class="hs" id="holdStage">
+    <picture class="hs-bg"><source media="(max-width:820px)" srcset="img/hold/hold-silk-m.jpg"><img src="img/hold/hold-silk.jpg" alt="" loading="lazy"></picture>
+    <div class="hs-vig"></div>
+    <div class="wrap hs-head"><div class="sub">Hold the ritual</div><h2 class="h-m">Three bottles, one quiet ritual.</h2><p>Cleanse, glow and refresh. Drag a bottle to turn it.</p></div>
+    <div class="hs-blur" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div>
+    <div class="hs-row">${B3D.map((id,i)=>{const p=byId(id);return `<div class="hs-item" data-hs="${i}" data-id="${id}">
+      <a class="hs-bt" href="#product-${id}" aria-label="${p.name}"><span class="hs-glowb"></span><span class="hs-float" style="--d:${-i*1.7}s"><span class="hs-tilt" style="--tilt:${HOLD[id].tilt}deg"><img src="img/hold/bt-${id}.webp" alt="${p.name} bottle" loading="lazy" draggable="false"><canvas></canvas></span></span></a>
+      <div class="hs-lab"><a href="#product-${id}"><b>${p.name}</b></a><span>${M(p.price)} · ${p.size}</span><button class="tbtn" data-add="${id}">+ Add to bag</button></div>
+    </div>`}).join("")}</div>
+  </div></section>
+
+  <section class="rc" id="rituals" style="--n:${R.length}"><div class="rc-pin">
+    <div class="rc-top wrap"><div class="sub gold">Our rituals</div><span class="rc-count" id="rcCount">01 / 0${R.length}</span></div>
+    <div class="rc-track" id="rcTrack">${R.map((r,i)=>`<a class="rc-slide" href="#product-${r.id}" data-rc="${i}"><img src="${img(r.img)}" alt="${r.name}: ${r.inc.map(x=>byId(x).name).join(", ")}" ${i>1?'loading="lazy"':''}></a>`).join("")}</div>
+    <div class="rc-card" id="rcCard">${R.map((r,i)=>`<div class="rc-c ${i?"":"on"}" data-rcc="${i}">
+      <div class="rc-num">0${i+1}</div>
+      <div class="rc-when">${r.when}</div>
+      <h3 class="rc-name">${r.name}</h3>
+      <p class="rc-line">${r.line}</p>
+      <ol class="rc-steps">${r.inc.map(x=>`<li><a href="#product-${x}">${byId(x).name}</a></li>`).join("")}</ol>
+      <button class="rc-btn" data-add="${r.id}">Add ritual · ${M(r.price)} <s>${money(worth(r))}</s></button>
+    </div>`).join("")}</div>
+    <div class="rc-hint">Scroll to explore</div>
+  </div></section>
+
+  <section class="dt" id="who">
+    <div class="dt-bg"><img src="${img("who-vanity")}" alt="A woman smoothing Absolute Brilliance Crème onto her cheek at a candlelit vanity" loading="lazy"></div>
+    <div class="dt-shade"></div>
+    <div class="dt-track"><div class="dt-in">
+      <p class="dt-small" data-dt>${DT_SMALL.map(l=>`<span class="dl">${[...l].map(c=>`<span class="dc">${c===" "?"&nbsp;":c}</span>`).join("")}</span>`).join("")}</p>
+      <h2 class="dt-big" data-dt>${DT_BIG.map(l=>`<span class="dl">${[...l].map(c=>`<span class="dc">${c===" "?"&nbsp;":c}</span>`).join("")}</span>`).join("")}</h2>
+    </div></div>
+    <div class="dt-aw"><div class="wrap"><div class="b3d-aw-head"><div class="sub gold">Recognised &amp; awarded</div><p class="h-m">Awarded for what is inside the bottle.</p></div>
+    <div class="aw-row reveal">${[["cc-2025-gold","Clean + Conscious 2025","Gold Winner"],["cc-2026-over50","Clean + Conscious 2026","Over 50s finalist"],["cc-2026-over40","Clean + Conscious 2026","Over 40s finalist"],["she-2024-editors","SHE-com Awards 2024","Editors’ Choice"],["she-2024-finalist","SHE-com Awards 2024","Finalist"]].map(a=>`<div class="aw-b"><img src="img/award/${a[0]}.png" alt="${a[1]} ${a[2]}"><b>${a[2]}</b><span>${a[1]}</span></div>`).join("")}</div>
+    </div></div>
   </section>
 
   <section class="sec reels-sec" id="reels" data-glow>${GF}
@@ -851,76 +1368,30 @@ function viewHome(){
     </div>`}).join("")}</div>
   </section>
 
-  <section class="who" id="who"><div class="who-pin" data-glow>${GF}
-    <div class="who-head">
-      <div class="who-pills">${WHO.map((w,i)=>`<span class="pill swap ${i?"":"on"}" data-wp="${i}">${w[0]}</span>`).join("")}</div>
-      <div class="who-stack">${WHO.map((w,i)=>`<h2 class="h-xl swap ${i?"":"on"}" data-wh="${i}">${w[1]}</h2>`).join("")}</div>
-      <p class="who-body swap on" id="whoBody">She notices what everyone is saving, wearing and recommending, and then decides for herself. ${W} is made for that woman: considered formulas that are discovered rather than sold, for a ritual that feels entirely her own.</p>
+  <section class="lu bg-white" id="life">
+    <div class="wrap"><div class="lu-label">Kept close · the whole collection</div></div>
+    <div class="lu-row">${LU_ROW.map((l,i)=>`<a class="lu-img" href="#product-${l[1]}" data-lu="${i}"><img src="${img(l[0])}" alt="" loading="lazy"><span>${byId(l[1]).name}</span></a>`).join("")}</div>
+    <div class="wrap lu-bar">
+      <h2 class="h-l">Made for the life you already have.</h2>
+      <div class="lu-nums"><button class="lu-arr" id="luPrev" aria-label="Previous">←</button>${GRP_N.map((g,i)=>`<button class="lu-n ${i?"":"on"}" data-lug="${i}" aria-label="${g[1]}">0${i+1}</button>`).join("")}</div>
     </div>
-    <div class="who-vid" id="whoVid"><video src="media/her-choice.mp4" poster="${img("her-choice")}" muted loop playsinline autoplay></video></div>
-    <div class="who-end" id="whoEnd"><div class="wrap"><p class="h-m">No one recommended it to her. She simply chose it.</p><a href="#home" data-goto="collection" class="btn btn-ivory">Find what appeals to you ${ARR}</a></div></div>
-  </div></section>
-
-  <section class="journey" id="journey"><div class="j-pin">
-    ${JOURNEY.map((j,i)=>`<div class="j-img" data-j="${i}"><img src="${img(j[0])}" alt="" loading="lazy"></div>`).join("")}
-    <div class="j-head"><div class="sub gold">From foothills to your vanity</div><h2 class="h-xl j-type"><span id="jType">${JOURNEY[0][1]}</span><span class="caret"></span></h2></div>
-    <div class="j-foot"><div class="wrap">
-      <div class="j-step" id="jStep"><b>01</b>${JOURNEY[0][3]}</div>
-      <div><p class="j-desc" id="jDesc">${JOURNEY[0][2]}</p><div class="j-bar"><i id="jBar"></i></div></div>
-      <a href="#shop" class="btn btn-ivory j-cta" id="jCta">Shop the collection ${ARR}</a>
-    </div></div>
-  </div></section>
-
-  <section class="light bundles" id="rituals">
-    <div class="b-media" id="bMedia"><span class="b-save" id="bSave"></span>${R.map((r,i)=>`<img src="${img(r.img)}" class="${i?"":"on"}" data-bimg="${i}" alt="${r.name}: ${r.inc.map(x=>byId(x).name).join(", ")}" loading="lazy">`).join("")}</div>
-    <div class="b-body">
-      <div class="sub gold" style="margin-bottom:16px">Our rituals</div>
-      <h2 class="h-l reveal" style="max-width:14ch">Rituals, composed to work together.</h2>
-      <p class="lede muted-l" style="margin-top:16px;max-width:44ch">A routine is something you do because you have to. A ritual is something you look forward to. Each set is sequenced, and priced below its parts.</p>
-      <div class="b-list">${R.map((r,i)=>`<button class="b-row ${i?"":"on"}" data-bundle="${i}"><span class="nm">${r.name}</span><span class="pr">${M(r.price)}</span></button>`).join("")}</div>
-      <div class="b-detail" id="bDetail"></div>
-    </div>
+    <div class="wrap lu-body" id="luBody">${luBody(0)}</div>
+    <div class="wrap lu-certs"><div class="sub gold">Certified &amp; tested</div>
+    <div class="certs certs-l reveal">${CERTS.map(c=>`<div class="cert"><svg viewBox="0 0 40 40">${ICON[c[1]]}</svg>${c[0]}</div>`).join("")}</div>
+  </div>
   </section>
 
-  <section class="pleasure" id="pleasure">
-    <div class="pl-cols">
-      ${[["tex-oil","01","The texture","Silk on the fingertips. A gold oil that sinks in and leaves only a glow behind.","radiance-elixir"],["tex-cream","02","The scent","Rose, saffron and the scent of trees after rain. Nothing synthetic, nothing loud.","aurora-bloom"],["reel-aurora","03","The morning after","Skin that wakes softer and plumper, and stays comfortable until evening.","aurora-bloom"]].map(c=>`
-      <div class="pl-col"><video src="media/${c[0]}.mp4" poster="${img(c[0])}" muted loop playsinline preload="none" data-auto></video>
-        <div class="glass reveal"><div class="n">${c[1]}</div><h3 class="sub sub-m">${c[2]}</h3><p>${c[3]}</p><a class="tbtn" href="#product-${c[4]}">Shop ${byId(c[4]).name} →</a></div></div>`).join("")}
-    </div>
-    <div class="pl-head"><div class="sub gold" style="margin-bottom:16px">Texture, scent, ritual</div><h2 class="h-l">A pleasure worth returning to.</h2></div>
-  </section>
-
-  <section class="reviews" id="reviews">
+  <section class="reviews rv-min" id="reviews">
     <div class="rv-left">
       <div class="rv-score"><span class="pill"><span class="stars" style="font-size:11px">★</span> 4.97 / 5</span><span class="sub" style="color:var(--t-lm)">68 verified reviews</span></div>
       <h2 class="h-l reveal" style="margin-top:22px">In their words.</h2>
-      <p class="muted-l" style="margin-top:12px;max-width:40ch">Our overall rating is 4.97 out of 5 from 68 verified reviews on mysaasecrets.com.au.</p>
       <div class="rv-slides" id="rvSlides"></div>
-      <div class="rv-ctrl"><button id="rvPrev" aria-label="Previous review">←</button><button id="rvNext" aria-label="Next review">→</button><span class="num" id="rvNum">01 / 10</span><div class="rv-bar"><i id="rvBar"></i></div></div>
+      <div class="rv-ctrl"><button id="rvPrev" aria-label="Previous review">←</button><button id="rvNext" aria-label="Next review">→</button><span class="num" id="rvNum">01 / 09</span><div class="rv-bar"><i id="rvBar"></i></div></div>
     </div>
     <div class="rv-right" id="rvRight"></div>
   </section>
 
-  <section class="sec awards" id="awards" data-glow>${GF}
-    <div class="wrap">
-      <div class="sec-head"><div><div class="sub gold">Recognised &amp; certified</div><h2 class="h-l reveal" style="max-width:16ch">Awarded for what is inside the bottle.</h2></div><p class="muted-d" style="max-width:38ch">Independent judges, certified standards and formulas tested on sensitive skin.</p></div>
-      <div class="aw-grid">
-        <div class="aw-she reveal">
-          <div class="aw-badges"><img src="img/award/she-2024-editors.png" alt="SHE-com Awards 2024 Editors' Choice"><img src="img/award/she-2024-finalist.png" alt="SHE-com Awards 2024 Finalist"></div>
-          <div><div class="sub gold">SHE-com Awards 2024</div><h3 class="h-m">Chosen by the editors.</h3>
-            <ul><li><span><a href="#product-rose-plum" style="border-bottom:1px solid rgba(229,207,159,.4)">Rosé Plum</a></span><b>Editors’ Choice</b></li><li><span><a href="#product-aurora-bloom" style="border-bottom:1px solid rgba(229,207,159,.4)">Aurora Bloom</a></span><b>Finalist</b></li><li><span><a href="#product-celestial-glow" style="border-bottom:1px solid rgba(229,207,159,.4)">Celestial Glow</a></span><b>Finalist</b></li></ul></div>
-        </div>
-        <div class="aw-cc">
-          ${[["cc-2025-gold","Clean + Conscious 2025 · Gold Winner","Radiance Elixir, Face Oil","radiance-elixir"],["cc-2026-over50","Clean + Conscious 2026 · Finalist","Aurora Bloom, Over 50s Skincare","aurora-bloom"],["cc-2026-over40","Clean + Conscious 2026 · Finalist","Ageless Oasis, Over 40s Skincare","ageless-oasis"]].map(a=>`<a class="aw-item reveal" href="#product-${a[3]}"><img src="img/award/${a[0]}.png" alt="${a[1]}"><div><b>${a[1]}</b><span>${a[2]}</span></div></a>`).join("")}
-        </div>
-      </div>
-      <div class="certs reveal">${CERTS.map(c=>`<div class="cert"><svg viewBox="0 0 40 40">${ICON[c[1]]}</svg>${c[0]}</div>`).join("")}</div>
-    </div>
-    <div class="aw-strip"><div class="marq">${[...Array(2)].map(()=>["SHE-com Editors’ Choice 2024","Clean + Conscious Gold Winner 2025","COSMOS Organic","Clean + Conscious Finalist 2026","SHE-com Finalist 2024","Vegan & cruelty-free"].map(t=>`<span>${t}</span>`).join("")).join("")}</div></div>
-  </section>
-
-  <section class="sec light" id="press"><div class="wrap">
+    <section class="sec light bg-white" id="press"><div class="wrap">
     <div class="sec-head"><div><div class="sub gold">As featured in</div><h2 class="h-l reveal">Noticed, quietly.</h2></div><a href="#journal" class="link">Read in the Journal</a></div>
     <div class="press">${PRESS.map(p=>`<a href="#journal" class="pr-card reveal"><div class="shot"><img src="${img("press-"+p[0])}" alt="MYŚAA featured in ${p[1]}" loading="lazy"></div><div><b>${p[1]}</b><small>${p[2]}</small></div></a>`).join("")}</div>
   </div></section>
@@ -955,12 +1426,12 @@ function presetLabel(){
 }
 function shopBanner(){
   const pre=presetLabel();
-  if(SHOPF.cat==="ritual") return `<img src="img/hero-2.jpg" alt="MYŚAA ritual products on a stone plinth with saffron and rose petals"><div class="wrap">
+  if(SHOPF.cat==="ritual") return `<img src="photos/r-morning.jpg" style="object-position:50% 60%" alt="MYŚAA ritual products on a stone plinth with saffron and rose petals"><div class="wrap">
     <div class="crumb"><a href="#home">Home</a> / Shop / Rituals</div><div class="sub gold">Rituals &amp; sets</div>
     <h1 class="h-xl">Composed to be used together.</h1>
     <p class="lede">Each ritual pairs the steps your skin needs in the order it needs them, and every set is priced below its parts.</p>
     <div class="b-foot"><div class="b-stats"><div><b>${R.length}</b><span>Rituals</span></div><div><b>Up to ${money(68)}</b><span>Saved per set</span></div><div><b>${money(FREE_SHIP)}+</b><span>Ships free</span></div></div><a href="#home" data-goto="shopGrid" class="btn btn-ivory">Explore the rituals ${ARR}</a></div></div>`;
-  return `<img src="img/hero-1.jpg" alt="MYŚAA Luxe collection in warm golden light"><div class="wrap">
+  return `<img src="photos/hero-slab.jpg" alt="MYŚAA Luxe collection in warm golden light"><div class="wrap">
     <div class="crumb"><a href="#home">Home</a> / Shop${pre?" / "+pre:""}</div><div class="sub gold">The ${W} apothecary</div>
     <h1 class="h-xl">${pre||"Himalayan botanicals, made in small batches."}</h1>
     <p class="lede">Slow-made with Himalayan herbs, Kashmiri saffron and 24K gold. Shop by category, by skin type or by what your skin is asking for.</p>
@@ -970,7 +1441,7 @@ function viewShop(){
   const rit=SHOPF.cat==="ritual";
   return `<section class="banner" data-glow id="shopBanner">${GF}<div class="bn-body">${shopBanner()}</div></section>
   <section class="light" style="padding:24px 0 var(--gpad)">
-    <div class="col-tabs" style="margin-bottom:0">${[["all","All"],["best","Bestsellers"],["face","Face"],["mist","Mists"],["body","Lips & hands"],["ritual","Rituals"]].map(t=>`<button class="col-tab ${SHOPF.cat===t[0]?"on":""}" data-filter="${t[0]}">${t[1]}</button>`).join("")}
+    <div class="col-tabs" style="margin-bottom:0">${[["all","All"],["best","Bestsellers"],["new","New"],["face","Face"],["mask","Masks"],["mist","Mists"],["body","Lips & body"],["ritual","Rituals"]].map(t=>`<button class="col-tab ${SHOPF.cat===t[0]?"on":""}" data-filter="${t[0]}">${t[1]}</button>`).join("")}
       <div class="shop-tools" style="margin-left:auto"><span class="shop-count" id="shopCount"></span>
         <label class="skin-f" ${rit?"hidden":""}><span class="sr">Skin type</span><select id="fSkin"><option value="">Skin type</option>${SKIN_N.map(k=>`<option value="${k[0]}" ${SHOPF.skin===k[0]?"selected":""}>${k[1]}</option>`).join("")}</select></label>
         <label class="skin-f" ${rit?"hidden":""}><span class="sr">Concern</span><select id="fConcern"><option value="">Concern</option>${CONCERN_N.map(k=>`<option value="${k[0]}" ${SHOPF.concern===k[0]?"selected":""}>${k[1]}</option>`).join("")}</select></label>
@@ -980,8 +1451,8 @@ function viewShop(){
   <div id="shopBand">${shopBand(rit)}</div>`;
 }
 function shopBand(rit){
-  return rit?`<section class="band"><div class="im"><img src="img/journey-4.jpg" alt="" loading="lazy"></div><div class="tx"><div class="sub gold">Not sure which ritual?</div><h2 class="h-l">Begin with the oil most women return to.</h2><p class="lede muted-d">Radiance Elixir is in four of our six rituals. Start there, then build the ritual around it.</p><a href="#product-radiance-elixir" class="btn btn-ivory">Discover Radiance Elixir ${ARR}</a></div></section>`
-  :`<section class="band"><div class="im"><img src="img/bundle-ageless-saffron.jpg" alt="Ageless Saffron Ritual" loading="lazy" style="filter:saturate(.85)"></div><div class="tx"><div class="sub gold">Ritual sets</div><h2 class="h-l">Not sure where to begin?</h2><p class="lede muted-d">Our ritual sets pair cleanser, mist, oil and moisture into one complete routine, chosen for your skin and priced below their parts.</p><a href="#rituals" class="btn btn-ivory">Explore ritual sets ${ARR}</a></div></section>`;
+  return rit?`<section class="band"><div class="im"><img src="photos/journey-4.jpg" alt="" loading="lazy"></div><div class="tx"><div class="sub gold">Not sure which ritual?</div><h2 class="h-l">Begin with the oil most women return to.</h2><p class="lede muted-d">Intense Radiance 24K Gold Oil Serum is in four of our six rituals. Start there, then build the ritual around it.</p><a href="#product-radiance-elixir" class="btn btn-ivory">Discover Intense Radiance 24K Gold Oil Serum ${ARR}</a></div></section>`
+  :`<section class="band"><div class="im"><img src="photos/r-evening.jpg" alt="Ageless Saffron Ritual" loading="lazy" style="filter:saturate(.85)"></div><div class="tx"><div class="sub gold">Ritual sets</div><h2 class="h-l">Not sure where to begin?</h2><p class="lede muted-d">Our ritual sets pair cleanser, mist, oil and moisture into one complete routine, chosen for your skin and priced below their parts.</p><a href="#rituals" class="btn btn-ivory">Explore ritual sets ${ARR}</a></div></section>`;
 }
 function setShopCat(cat){
   const was=SHOPF.cat==="ritual"; SHOPF.cat=cat; const now=cat==="ritual";
@@ -997,13 +1468,17 @@ function setShopCat(cat){
   sortShop();
 }
 function shopList(){
-  let list=SHOPF.cat==="all"?ALL.slice():SHOPF.cat==="best"?P.filter(p=>p.best):ALL.filter(p=>p.cat===SHOPF.cat);
+  let list=listFor(SHOPF.cat);
   if(SHOPF.skin) list=list.filter(p=>(SKIN[p.id]||[]).includes(SHOPF.skin));
   if(SHOPF.concern) list=list.filter(p=>(CONCERN[p.id]||[]).includes(SHOPF.concern));
   if(SHOPF.grp) list=list.filter(p=>GRP[p.id]===SHOPF.grp);
   return list;
 }
-const listFor=f=>f==="all"?ALL.slice():f==="best"?P.filter(p=>p.best):ALL.filter(p=>p.cat===f);
+const listFor=f=>f==="all"?ALL.slice():f==="best"?P.filter(p=>p.best):f==="new"?P.filter(p=>p.isNew):ALL.filter(p=>p.cat===f);
+function dcard(p){const life=p.mood&&p.mood[0]; return `<article class="dk"><a href="#product-${p.id}" class="dc-img" aria-label="${p.name}"><img class="pk" src="${cut(p.id)}" alt="${p.name}" loading="lazy">${life?`<img class="life" src="${img(life)}" alt="" loading="lazy">`:""}</a>
+  <a href="#product-${p.id}" class="dc-name">${p.name}</a><span class="dc-price">${M(p.price)}</span>
+  <button class="dc-add" data-add="${p.id}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg>Add to bag</button></article>`;}
+function renderDock(list){const el=$("#homeGrid"); if(!el) return; el.innerHTML=list.map(dcard).join(""); if(hasG) gsap.fromTo(el.children,{opacity:0,y:18},{opacity:1,y:0,duration:.8,stagger:.06,ease:"power3.out"});}
 function renderGrid(el,list){ if(!el) return; el.innerHTML=list.map(pcard).join(""); if(hasG) gsap.fromTo(el.children,{opacity:0,y:24},{opacity:1,y:0,duration:.9,stagger:.05,ease:"power3.out"}); else [...el.children].forEach(c=>c.classList.remove("reveal")); }
 
 function viewProduct(p){
@@ -1015,7 +1490,7 @@ function viewProduct(p){
     <div class="pdp-grid">
       <div class="gallery">
         ${rit?`<div class="g" style="aspect-ratio:4/5"><img src="${img(p.img)}" alt="${p.name}"></div>${p.inc.map(i=>`<div class="g" style="--tint:${TINT[i]}"><img class="cut ${JAR.has(i)?"jar":""}" src="${cut(i)}" alt="${byId(i).name}"></div>`).join("")}`
-        :`<div class="g" style="--tint:${TINT[p.id]}">${BADGE[p.id]?`<img class="award" src="img/award/${BADGE[p.id]}.png" alt="Award">`:""}<img class="cut ${JAR.has(p.id)?"jar":""}" src="${cut(p.id)}" alt="${p.name}, ${p.type}"></div><div class="g"><img src="img/ing/${p.id}.jpg" alt="Star ingredient: ${ING[p.id]}" loading="lazy"></div>${p.mood.slice(0,2).map(s=>`<div class="g"><img src="${img(s)}" alt="" loading="lazy"></div>`).join("")}${p.video?`<div class="g"><video src="media/reel-aurora.mp4" muted loop playsinline autoplay></video></div>`:""}`}
+        :`<div class="g" style="--tint:${TINT[p.id]}">${BADGE[p.id]?`<img class="award" src="img/award/${BADGE[p.id]}.png" alt="Award">`:""}<img class="cut ${JAR.has(p.id)?"jar":""}" src="${cut(p.id)}" alt="${p.name}, ${p.type}"></div>${p.mood.slice(0,3).map(s=>`<div class="g"><img src="${img(s)}" alt="" loading="lazy"></div>`).join("")}${p.video?`<div class="g"><video src="media/reel-aurora.mp4" muted loop playsinline autoplay></video></div>`:""}`}
       </div>
       <div class="summary" id="summary">
         <div class="sub" style="color:var(--gold-d)">${rit?"Ritual":W+" Luxe"} · ${p.type}</div>
@@ -1048,7 +1523,7 @@ function viewProduct(p){
 }
 const BEN_ICON={cell:'<circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v4M20 30v4M6 20h4M30 20h4"/>',barrier:'<path d="M20 5l13 5v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9z"/><path d="M13 19h14M13 24h14M16 14h8"/>',collagen:'<path d="M12 33c0-9 16-9 16-18 0-4-3-8-8-8"/><path d="M28 33c0-9-16-9-16-18 0-4 3-8 8-8"/><path d="M14 25h12M14 15h12"/>',edible:'<path d="M20 34c-7 0-11-5-11-12 0-6 4-10 8-10 1.5 0 2.3.6 3 .6s1.5-.6 3-.6c4 0 8 4 8 10 0 7-4 12-11 12z"/><path d="M20 12c0-3 2-6 5-7"/>'};
 function viewStory(){
-  return `<section class="banner" data-glow>${GF}<img src="img/journey-1.jpg" alt="Himalayan foothills at dawn"><div class="wrap">
+  return `<section class="banner" data-glow>${GF}<img src="photos/journey-1.jpg" alt="Himalayan foothills at dawn"><div class="wrap">
     <div class="crumb"><a href="#home">Home</a> / Our story</div><div class="sub gold">About us · ${W} (Mee-Sah)</div>
     <h1 class="h-xl">${W}’s story.</h1>
     <p class="lede">Skincare that is effective, pure, natural and safe for everyone, guided by nature and reassured by science.</p>
@@ -1060,7 +1535,7 @@ function viewStory(){
   </div></section>
 
   <section class="light" style="padding:0 0 clamp(80px,9vw,140px)"><div class="wrap st-founder">
-    <figure class="ph reveal"><img src="img/founder.jpg" alt="Shefali, founder of MYŚAA" loading="lazy"><figcaption>Shefali · Founder</figcaption></figure>
+    <figure class="ph reveal"><img src="photos/founder.jpg" alt="Shefali, founder of MYŚAA" loading="lazy"><figcaption>Shefali · Founder</figcaption></figure>
     <div class="reveal">
       <div class="sub gold" style="margin-bottom:16px">The founder</div>
       <h2 class="h-l" style="margin-bottom:24px">A lifelong belief in honest, transformative skincare.</h2>
@@ -1073,9 +1548,9 @@ function viewStory(){
   <section class="sec" style="background:var(--night)" data-glow>${GF}<div class="wrap">
     <div class="sec-head"><div><div class="sub gold">How we create</div><h2 class="h-l reveal" style="max-width:18ch">Nature’s finest treasures, carefully crafted.</h2></div><p class="muted-d" style="max-width:44ch">We combine roots, seeds, stems, bark, botanical oils and hydrosols, selected for their restorative properties and their ability to work in harmony with the skin.</p></div>
     <div class="pillars">
-      <article class="pillar reveal"><img src="img/saffron-bowl.jpg" alt="" loading="lazy"><div class="in"><div class="n">01</div><h3 class="h-m">A quest for purity.</h3><p>Frustrated with the synthetic ingredients and harsh chemicals in many skincare products, our founder set out to find the most potent, pure ingredients nature has to offer, with real efficacy and results.</p></div></article>
+      <article class="pillar reveal"><img src="photos/saffron-bowl.jpg" alt="" loading="lazy"><div class="in"><div class="n">01</div><h3 class="h-m">A quest for purity.</h3><p>Frustrated with the synthetic ingredients and harsh chemicals in many skincare products, our founder set out to find the most potent, pure ingredients nature has to offer, with real efficacy and results.</p></div></article>
       <article class="pillar reveal"><img src="img/ing/radiance-elixir.jpg" alt="" loading="lazy"><div class="in"><div class="n">02</div><h3 class="h-m">The formulations.</h3><p>Enriched with highly concentrated bio-actives, potent antioxidants, essential fatty acids, ceramides, omegas and natural peptides, designed to nourish, protect and rejuvenate your skin.</p></div></article>
-      <article class="pillar reveal"><img src="img/ritual-rest.jpg" alt="" loading="lazy"><div class="in"><div class="n">03</div><h3 class="h-m">Less is more.</h3><p>Our “less is more” philosophy embraces the idea that true beauty is revealed through mindful minimalism.</p></div></article>
+      <article class="pillar reveal"><img src="photos/ritual-rest.jpg" alt="" loading="lazy"><div class="in"><div class="n">03</div><h3 class="h-m">Less is more.</h3><p>Our “less is more” philosophy embraces the idea that true beauty is revealed through mindful minimalism.</p></div></article>
     </div>
   </div></section>
 
@@ -1094,15 +1569,15 @@ function viewStory(){
     <p class="q reveal">“In Himalayan stillness, ${W} finds truth.”</p>
     <p class="copy lede reveal">Rooted in ancient Indian wisdom, we source directly from the Himalayas. Each ingredient is quality-checked and every formula is cross-examined. With over 5,000 years of trust in these natural practices, we aim to carry that legacy forward. While many believe actives are exclusive to inorganic skincare, the Himalayas have long shown us that organic ingredients are just as potent, if not more.</p>
   </div>
-  <div class="pano"><img src="img/himalaya-pano.jpg" alt="The Himalayan range" loading="lazy" data-par></div>
+  <div class="pano"><img src="photos/himalaya-pano.jpg" alt="The Himalayan range" loading="lazy" data-par></div>
   <div class="ticker"><div class="marq">${[...Array(3)].map(()=>["Certified organic","Wild harvested","Microbiome-friendly","Holistic"].map(t=>`<span>${t}</span>`).join("")).join("")}</div></div>
   </section>
 
-  <section class="band"><div class="im"><img src="img/hero-3.jpg" alt="MYŚAA products on a walnut ledge" loading="lazy"></div><div class="tx"><div class="sub gold">Join the ${W} movement</div><h2 class="h-l">The science of nature, in your ritual.</h2><p class="lede muted-d">Our products are more than skincare: they are a testament to the remarkable capabilities of natural ingredients. Join us on a journey to healthier, radiant skin and a more sustainable world.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#shop" class="btn btn-ivory">Shop the collection ${ARR}</a><a href="#contact" class="btn btn-line-d">Contact us</a></div></div></section>`;
+  <section class="band"><div class="im"><img src="photos/hero-slab.jpg" alt="MYŚAA products on a walnut ledge" loading="lazy"></div><div class="tx"><div class="sub gold">Join the ${W} movement</div><h2 class="h-l">The science of nature, in your ritual.</h2><p class="lede muted-d">Our products are more than skincare: they are a testament to the remarkable capabilities of natural ingredients. Join us on a journey to healthier, radiant skin and a more sustainable world.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#shop" class="btn btn-ivory">Shop the collection ${ARR}</a><a href="#contact" class="btn btn-line-d">Contact us</a></div></div></section>`;
 }
 const SOC={ig:'<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/>',fb:'<path d="M14 8h3V4.5h-3c-2.5 0-4 1.6-4 4V11H7.5v3.5H10V21h3.5v-6.5H16l.6-3.5h-3.1V8.7c0-.4.3-.7.5-.7z"/>',yt:'<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3l5 2.7-5 2.7z"/>'};
 function viewContact(){
-  return `<section class="banner" data-glow style="min-height:max(460px,60vh)">${GF}<img src="img/vanity.jpg" alt="" style="object-position:70% 40%"><div class="wrap">
+  return `<section class="banner" data-glow style="min-height:max(460px,60vh)">${GF}<img src="photos/vanity.jpg" alt="" style="object-position:70% 40%"><div class="wrap">
     <div class="crumb"><a href="#home">Home</a> / Contact</div><div class="sub gold">Contact us</div>
     <h1 class="h-xl">We would love to hear from you.</h1>
     <p class="lede">Questions about a ritual, an order or your skin? Send us a message or request a call, and the ${W} team will be in touch.</p>
@@ -1144,8 +1619,8 @@ function megaHTML(){
     <div class="mm-col"><p class="mm-h">Shop by skin type</p>${SKIN_N.map(k=>`<a class="mm-link" href="#shop-skin-${k[0]}">${k[1]}<span>${sc(k[0])}</span></a>`).join("")}</div>
     <div class="mm-col"><p class="mm-h">Shop by concern</p>${CONCERN_N.map(k=>`<a class="mm-link" href="#shop-concern-${k[0]}">${k[1]}<span>${cc(k[0])}</span></a>`).join("")}</div>
     <div class="mm-col mm-feat-col"><p class="mm-h">Featured</p><div class="mm-feat">
-      <a class="mm-card" href="#product-radiance-elixir"><span class="im"><img src="img/ing/radiance-elixir.jpg" alt=""><img class="cutx" src="img/p/radiance-elixir.webp" alt=""><span class="tg">Bestseller</span></span><b>Radiance Elixir</b><small>24K gold oil serum · ${money(199)}</small></a>
-      <a class="mm-card" href="#rituals"><span class="im"><img src="img/bundle-ageless-saffron.jpg" alt=""><span class="tg">Gift a ritual</span></span><b>Ritual sets</b><small>Not sure where to begin? Start here</small></a>
+      <a class="mm-card" href="#product-radiance-elixir"><span class="im"><img src="photos/l-bed.jpg" alt=""><span class="tg">Bestseller</span></span><b>Intense Radiance 24K Gold Oil Serum</b><small>24K gold oil serum · ${money(199)}</small></a>
+      <a class="mm-card" href="#rituals"><span class="im"><img src="photos/r-evening.jpg" alt=""><span class="tg">Gift a ritual</span></span><b>Ritual sets</b><small>Not sure where to begin? Start here</small></a>
     </div></div></div>
     <div class="mm-bar"><div class="mm-perks"><span><i></i>Complimentary shipping over ${money(FREE_SHIP)}</span><span><i></i>Pay in four with Afterpay</span><span><i></i>COSMOS Organic certified</span></div><a class="tbtn" href="#shop">Shop all ${P.length} products →</a></div>`;
 }
@@ -1160,19 +1635,19 @@ let heroTimer=null,rafPins=null,rvTimer=null;
 function route(){
   const h=(location.hash||"#home").slice(1); const m=$("#main");
   if(hasG) ScrollTrigger.getAll().forEach(t=>t.kill());
-  clearInterval(heroTimer);clearInterval(rvTimer);cancelAnimationFrame(rafPins);stopDust();
+  clearInterval(heroTimer);clearInterval(rvTimer);cancelAnimationFrame(rafPins);cancelAnimationFrame(rafDock);cancelAnimationFrame(rafHold);stopDust();kill3D();if(SPIN){SPIN.stop();SPIN=null;}
   let nav="";
   if(h.startsWith("product-")&&byId(h.slice(8))){const p=byId(h.slice(8));m.innerHTML=viewProduct(p);document.title=p.name+" · MYŚAA";}
   else if(h==="rituals"||h==="shop"||h.startsWith("shop-")){const pt=h.split("-");SHOPF={cat:h==="rituals"?"ritual":"all",skin:"",concern:"",grp:""};if(pt[1]&&pt[2]&&["skin","concern","grp"].includes(pt[1]))SHOPF[pt[1]]=pt.slice(2).join("-");m.innerHTML=viewShop();sortShop();nav=h==="rituals"?"rituals":"shop";document.title=(h==="rituals"?"Rituals":presetLabel()||"Shop")+" · MYŚAA";}
   else if(h==="contact"){m.innerHTML=viewContact();nav="contact";document.title="Contact · MYŚAA";}
   else if(h==="story"){m.innerHTML=viewStory();nav="story";document.title="Our story · MYŚAA";}
   else if(h==="journal"){m.innerHTML=viewJournal();nav="journal";document.title="Journal · MYŚAA";}
-  else {m.innerHTML=viewHome();document.title="MYŚAA · Himalayan botanical skincare";renderGrid($("#homeGrid"),P.filter(p=>p.best).concat(P.filter(p=>!p.best)).slice(0,8));initHome();}
+  else {m.innerHTML=viewHome();document.title="MYŚAA · Himalayan botanical skincare";renderDock(P.filter(p=>p.best).concat(P.filter(p=>!p.best)).slice(0,12));initHome();}
   $$(".nav a").forEach(a=>a.classList.toggle("active",a.dataset.nav===nav));
   document.body.classList.toggle("is-home",!h.startsWith("product-"));
   if(lenis) lenis.scrollTo(0,{immediate:true}); else scrollTo(0,0);
   $("#mmenu").classList.remove("on"); lock(false);
-  initMotion(); initGlow();
+  initMotion(); initGlow(); initHold(); initDock(); initHoldGrow();
 }
 addEventListener("hashchange",route);
 
@@ -1214,10 +1689,9 @@ function setRv(i){
 }
 function initHome(){
   setSlide(0); heroTimer=setInterval(()=>setSlide(((window.__slide||0)+1)%HERO.length),7000);
-  setBundle(0); buildReviews(); startDust();
+  buildReviews(); startDust(); homeFx(); window.__lu=0;
   const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target.tagName==="VIDEO"?e.target:e.target.querySelector("video");if(!v)return;if(e.isIntersecting){v.preload="auto";v.play().catch(()=>{})}else v.pause();}),{threshold:.2});
-  $$(".reel,[data-auto],#whoVid video").forEach(x=>io.observe(x));
-  pinsLoop();
+  $$(".reel,[data-auto]").forEach(x=>io.observe(x));
 }
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 const lerp=(a,b,t)=>a+(b-a)*t;
@@ -1267,6 +1741,147 @@ function pinsLoop(){
   tick();
 }
 
+
+/* v4.4 home scroll effects */
+function homeFx(){
+  const dt=$("#who"),rc=$("#rituals"),lu=$("#life"); if(!dt) return;
+  const blocks=$$("[data-dt]").map((b,bi)=>({el:b,cs:[...b.querySelectorAll(".dc")].map(c=>({c,r:Math.random()*1.25+.15})),k:bi?0.95:1.15,off:bi?0.32:0,last:-1}));
+  const bg=$(".dt-bg"), slides=$$(".rc-slide"), cards=$$(".rc-c"), n=slides.length, luImgs=$$(".lu-img");
+  let lastI=-1;
+  const tick=()=>{
+    if(!document.body.contains(dt)) return;
+    const vh=innerHeight, vw=innerWidth;
+    /* WHO: parallax + letters gather */
+    const r=dt.getBoundingClientRect();
+    if(r.bottom>0&&r.top<vh){
+      bg.style.transform=`translate3d(0,${(r.top+r.height/2-vh/2)*-0.18}px,0)`;
+      blocks.forEach(b=>{const p=clamp((vh-r.top-vh*b.off)/(vh*0.95)); const e=1-Math.pow(1-p,3); const spread=+(1-e).toFixed(3);
+        if(spread!==b.last){b.last=spread; b.cs.forEach(o=>{o.c.style.marginRight=(o.r*spread*b.k)+"em";}); b.el.style.opacity=.35+.65*e;}});
+    }
+    /* RITUALS: one step per scroll */
+    const q=prog(rc), raw=q*(n-1), i0=Math.min(n-1,Math.floor(raw)), f=raw-i0, pp=i0+ease(clamp((f-.2)/.6));
+    const w=slides[0].offsetWidth, mob=vw<820, S=mob?1.35:1.75, sp=vw*.43+w*S/2;
+    slides.forEach((s,k)=>{const d=k-pp, sc=1+(S-1)*ease(Math.min(1,Math.abs(d))); s.style.transform=`translate(calc(-50% + ${d*sp}px),-50%) scale(${sc})`; s.style.zIndex=Math.abs(d)<.5?3:1;});
+    const ai=Math.round(pp); if(ai!==lastI){lastI=ai; cards.forEach((c,k)=>c.classList.toggle("on",k===ai)); $("#rcCount").textContent="0"+(ai+1)+" / 0"+n;}
+    /* KEPT CLOSE: lineup grows in */
+    const lr=$(".lu-row").getBoundingClientRect(); const lp=clamp((vh-lr.top)/(vh*0.75));
+    luImgs.forEach((im,k)=>{const t=ease(clamp((lp-k*.12)/.52)); im.style.clipPath=`inset(0 0 ${(1-t)*100}% 0)`;});
+    rafPins=requestAnimationFrame(tick);
+  };
+  tick();
+}
+/* DIOR-STYLE DOCK */
+let rafDock=null;
+function initDock(){
+  const sec=$("#dock"), hero=$("#hero"), side=$(".dh-side"); if(!sec||!hero) return;
+  const top=$(".hero-top",hero), bot=$(".hero-bot",hero);
+  const lerp=(a,b,t)=>a+(b-a)*t, eio=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  let lastP=-1;
+  const tick=()=>{ rafDock=requestAnimationFrame(tick); if(!document.body.contains(sec)) return;
+    const vw=innerWidth, vh=innerHeight;
+    if(vw<=820){ if(lastP!==-2){hero.style.cssText=""; top.style.transform=""; bot.style.opacity=""; lastP=-2;} return; }
+    const S=vh*.9; sec.style.setProperty("--dockS",S+"px");
+    const p=clamp(-sec.getBoundingClientRect().top/S); if(Math.abs(p-lastP)<.0005) return; lastP=p;
+    const gp=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gpad"))||24;
+    // phase 1: shrink into a framed card; phase 2: slide left and dock
+    const a=eio(clamp(p/.45)), b=eio(clamp((p-.45)/.55));
+    const c1={l:vw*.08,t:vh*.1,w:vw*.84,h:vh*.8}, c2={l:0,t:0,w:vw*.40,h:vh};
+    const l=lerp(lerp(0,c1.l,a),c2.l,b), t=lerp(lerp(0,c1.t,a),c2.t,b), w=lerp(lerp(vw,c1.w,a),c2.w,b), h=lerp(lerp(vh,c1.h,a),c2.h,b);
+    hero.style.left=l+"px"; hero.style.top=t+"px"; hero.style.width=w+"px"; hero.style.height=h+"px";
+    hero.style.borderRadius=(4*a*(1-b))+"px";
+    top.style.transform=`scale(${lerp(1,.7,b)})`;
+    bot.style.opacity=1-clamp(p/.3);
+  };
+  tick();
+}
+let rafHold=null;
+function initHoldGrow(){const h=$("#hold"),hs=$("#holdStage"); if(!h||!hs) return;
+  const tick=()=>{rafHold=requestAnimationFrame(tick); if(!document.body.contains(h)) return;
+    const vh=innerHeight, t=h.getBoundingClientRect().top, p=clamp(1-t/vh), e=1-Math.pow(1-p,3), mob=innerWidth<=820;
+    hs.style.setProperty("--ci",((1-e)*(mob?6:9))+"%"); hs.style.setProperty("--cx",((1-e)*(mob?5:14))+"%"); hs.style.setProperty("--cr",((1-e)*14)+"px");};
+  tick();}
+function setLu(i){const N=GRP_N.length; i=(i+N)%N; $$("[data-lug]").forEach((b,k)=>b.classList.toggle("on",k===i)); const b=$("#luBody"); b.style.opacity=0; setTimeout(()=>{b.innerHTML=luBody(i); b.style.opacity=1;},300); window.__lu=i;}
+
+
+/* 3D bottle mounting (loaded only when needed) */
+let B3D_INST=[];
+function kill3D(){B3D_INST.forEach(i=>{try{i.destroy()}catch(e){}});B3D_INST=[];}
+function mount3D(){
+  const home=$("#b3dHome"), pdp=$$("[data-b3d]");
+  if(!home&&!pdp.length) return;
+  const go=async el=>{try{
+    const mod=await import("./js/3d/bottle3d.js");
+    await Promise.all([document.fonts.load("600 40px Aileron"),document.fonts.load("400 40px Aileron")]).catch(()=>{});
+    if(!document.body.contains(el)) return;
+    if(el===home){B3D_INST.push(mod.mountBottles(el,B3D,{labels:$$("[data-b3dl]"),gap:innerWidth<720?1.5:2.25,baseAt:innerWidth<720?.76:.8,fit:innerWidth<720?1.8:1.86,bg:innerWidth<720?"photos/stage-light-m.jpg":"photos/stage-light.jpg",bgPos:[.5,.85],onReady:()=>{const l=$("#b3dLoad"); if(l) l.style.opacity=0; $("#hold .b3d").classList.add("ready");}}));}
+    else B3D_INST.push(mod.mountBottles(el,[el.dataset.b3d],{gap:1,clear:0xEEE6D9}));
+  }catch(e){console.warn("3D unavailable",e); const l=$("#b3dLoad"); if(l) l.textContent="";}};
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);go(e.target);}}),{rootMargin:"1400px 0px"});
+  if(home) io.observe(home); pdp.forEach(c=>io.observe(c));
+}
+
+
+/* HOLD THE RITUAL: blank bottle photos + label printed on the glass from the PDFs, turning a full 360° (WebGL) */
+const HOLD={"celestial-glow":{cap:.2864,bx:[.03125,.96875],frost:1,tilt:-4},"triphase-essence":{cap:.2706,bx:[.03125,.96875],frost:0,tilt:2.5},"floral-harmony":{cap:.2835,bx:[.0305,.9695],frost:1,tilt:4.5}};
+let SPIN=null;
+function initHold(){
+  const sec=$("#holdStage"); if(!sec) return; if(SPIN){SPIN.stop();SPIN=null;}
+  const vs=`attribute vec2 p; varying vec2 uv; void main(){ uv=p; gl_Position=vec4(p.x*2.-1.,1.-p.y*2.,0.,1.); }`;
+  const fs=`precision highp float; varying vec2 uv; uniform sampler2D T; uniform float rot,cap,bx0,bx1,frost;
+    const float PI=3.14159265;
+    void main(){
+      if(uv.y<cap+.006) discard;
+      float by=(uv.y-cap)/(1.-cap); float v=(by+.022)/.946; if(v<0.||v>1.) discard;
+      float px=(uv.x-bx0)/(bx1-bx0)*2.-1.; if(abs(px)>.992) discard;
+      float a0=asin(px), e=sqrt(1.-px*px);
+      float uf=fract((a0+rot)/(2.*PI)+.5);                 /* print on the side facing you */
+      float ub=fract((PI-a0+rot)/(2.*PI)+.5);              /* print on the far side, seen through the glass (mirrored) */
+      float f=texture2D(T,vec2(uf,v)).a*mix(.5,.94,smoothstep(0.,.55,e));
+      float b=texture2D(T,vec2(ub,v),mix(1.2,3.5,frost)).a*mix(.42,.07,frost)*e;
+      float a=f+b*(1.-f); if(a<.003) discard;
+      vec3 ink=vec3(.085,.06,.05), back=mix(vec3(.16,.07,.04),vec3(.3,.26,.22),frost);
+      gl_FragColor=vec4(mix(back,ink,f/a),a);
+    }`;
+  const items=$$("[data-hs]",sec).map((el,i)=>{
+    const id=el.dataset.id, cfg=HOLD[id], cv=$("canvas",el), bt=$(".hs-bt",el);
+    const gl=cv.getContext("webgl",{premultipliedAlpha:false,alpha:true,antialias:true}); if(!gl) return null;
+    const sh=(t,src)=>{const o=gl.createShader(t);gl.shaderSource(o,src);gl.compileShader(o);return o;};
+    const pr=gl.createProgram(); gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs)); gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs)); gl.linkProgram(pr); gl.useProgram(pr);
+    const buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([0,0,1,0,0,1,0,1,1,0,1,1]),gl.STATIC_DRAW);
+    const loc=gl.getAttribLocation(pr,"p"); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+    const U=n=>gl.getUniformLocation(pr,n), uRot=U("rot");
+    gl.uniform1f(U("cap"),cfg.cap); gl.uniform1f(U("bx0"),cfg.bx[0]); gl.uniform1f(U("bx1"),cfg.bx[1]); gl.uniform1f(U("frost"),cfg.frost);
+    gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+    const o={el,gl,cv,uRot,ready:false,rot:i*2.1+.4,spd:.38+i*.03,v:0,drag:null};
+    const im=new Image(); im.onload=()=>{const t=gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D,t);
+      gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,im); gl.generateMipmap(gl.TEXTURE_2D);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT); gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+      const ext=gl.getExtension("EXT_texture_filter_anisotropic"); if(ext) gl.texParameterf(gl.TEXTURE_2D,ext.TEXTURE_MAX_ANISOTROPY_EXT,Math.min(8,gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT)));
+      o.ready=true;}; im.src=`img/hold/lbl-${id}.png`;
+    // drag to turn it yourself; it carries on turning when you let go
+    let moved=false;
+    bt.addEventListener("pointerdown",e=>{o.drag={x:e.clientX,r0:o.rot,lx:e.clientX,lt:performance.now()}; moved=false; bt.setPointerCapture(e.pointerId); bt.classList.add("grab");});
+    bt.addEventListener("pointermove",e=>{if(!o.drag) return; const dx=e.clientX-o.drag.x; if(Math.abs(dx)>4) moved=true; const now=performance.now();
+      o.v=(e.clientX-o.drag.lx)/Math.max(8,now-o.drag.lt)*0.9; o.drag.lx=e.clientX; o.drag.lt=now; o.rot=o.drag.r0+dx*0.011;});
+    const up=()=>{if(o.drag){o.drag=null; bt.classList.remove("grab");}};
+    bt.addEventListener("pointerup",up); bt.addEventListener("pointercancel",up);
+    bt.addEventListener("click",e=>{if(moved){e.preventDefault();moved=false;}});
+    bt.addEventListener("dragstart",e=>e.preventDefault());
+    return o;}).filter(Boolean);
+  const size=()=>items.forEach(o=>{const dpr=Math.min(2,devicePixelRatio||1), r=o.cv.getBoundingClientRect(); o.cv.width=Math.round(o.cv.offsetWidth*dpr); o.cv.height=Math.round(o.cv.offsetHeight*dpr);});
+  size(); const ro=new ResizeObserver(size); items.forEach(o=>ro.observe(o.cv));
+  let vis=false; const io=new IntersectionObserver(es=>{vis=es[0].isIntersecting; sec.classList.toggle("in",vis||sec.classList.contains("in"));},{threshold:.15}); io.observe(sec);
+  let raf=0, last=performance.now();
+  const loop=()=>{raf=requestAnimationFrame(loop); const now=performance.now(), dt=Math.min(.05,(now-last)/1000); last=now; if(!vis) return;
+    items.forEach(o=>{ if(!o.drag){ o.v*=Math.pow(.04,dt); o.rot+=(o.spd+o.v*16)*dt; }
+      if(!o.ready) return; const gl=o.gl; gl.viewport(0,0,o.cv.width,o.cv.height); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.uniform1f(o.uRot,o.rot); gl.drawArrays(gl.TRIANGLES,0,6);});
+  };
+  loop();
+  SPIN={stop(){cancelAnimationFrame(raf);io.disconnect();ro.disconnect();items.forEach(o=>{const x=o.gl.getExtension("WEBGL_lose_context"); if(x) x.loseContext();});}};
+}
+
 /* GLOW FIELDS — cursor-reactive */
 function initGlow(){
   $$("[data-glow]").forEach(sec=>{
@@ -1313,14 +1928,20 @@ function stopDust(){cancelAnimationFrame(dustRaf);}
 /* MOTION */
 function initMotion(){
   const hdr=$("#header");
-  const onScroll=()=>{const y=lenis?lenis.scroll:scrollY;hdr.classList.toggle("scrolled",y>10);const sb=$("#stickybar"),sm=$("#summary");if(sb&&sm)sb.classList.toggle("on",sm.getBoundingClientRect().bottom<0);};
+  const onScroll=()=>{const y=lenis?lenis.scroll:scrollY;hdr.classList.toggle("scrolled",y>10); const dy=y-(window.__lastY||0); if(Math.abs(dy)>4){hdr.classList.toggle("hide",dy>0&&y>120); window.__lastY=y;}const sb=$("#stickybar"),sm=$("#summary");if(sb&&sm)sb.classList.toggle("on",sm.getBoundingClientRect().bottom<0);};
   onScroll(); if(lenis){if(window.__os)lenis.off&&lenis.off("scroll",window.__os);lenis.on("scroll",onScroll);}else addEventListener("scroll",onScroll,{passive:true});
   window.__os=onScroll;
   if(!hasG) return;
   ScrollTrigger.batch(".reveal",{start:"top 92%",once:true,onEnter:els=>gsap.to(els,{opacity:1,y:0,duration:1.1,stagger:.08,ease:"power3.out",overwrite:true})});
   $$(".reveal").forEach(el=>{if(el.getBoundingClientRect().top<innerHeight) gsap.to(el,{opacity:1,y:0,duration:1,ease:"power3.out",delay:.2});});
-  if($(".hero-top")){gsap.from(".hero-top > .wrap > *",{opacity:0,y:30,duration:1.3,stagger:.12,ease:"power3.out",delay:.15});gsap.from(".hero-bot .wrap > *",{opacity:0,y:20,duration:1.2,stagger:.1,ease:"power3.out",delay:.55});
-    gsap.to(".hero-top",{yPercent:-30,opacity:0,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}});}
+  if($(".hero-top")){
+    const tl=gsap.timeline({delay:.35,defaults:{ease:"power3.out"}});
+    tl.fromTo(".hero-top .sub.hr-fade",{opacity:0,y:10,filter:"blur(6px)"},{opacity:1,y:0,filter:"blur(0px)",duration:1.6})
+      .fromTo(".hr-words .hw > span",{opacity:0,yPercent:38,filter:"blur(10px)"},{opacity:1,yPercent:0,filter:"blur(0px)",duration:2,stagger:.09,ease:"power4.out"},"-=1.1")
+      .fromTo(".hero-lede",{opacity:0,y:14,filter:"blur(8px)"},{opacity:1,y:0,filter:"blur(0px)",duration:1.8},"-=1.4")
+      .fromTo(".hero-top .ctas",{opacity:0,y:10},{opacity:1,y:0,duration:1.4},"-=1.3")
+      .fromTo(".hero-bot .in-scene",{opacity:0,x:16},{opacity:1,x:0,duration:1.6},"-=1.2");
+    if(innerWidth<=820) gsap.to(".hero-top",{yPercent:-30,opacity:0,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}});}
   setTimeout(()=>ScrollTrigger.refresh(),400);
 }
 
@@ -1333,7 +1954,7 @@ function renderBag(){
   const sub=subtotal(),left=Math.max(0,FREE_SHIP-sub);
   $("#ship").innerHTML=sub>=FREE_SHIP?`Your order ships free across Australia.<div class="bar"><i style="width:100%"></i></div>`:`You are <b>${money(left)}</b> away from free shipping.<div class="bar"><i style="width:${Math.min(100,sub/FREE_SHIP*100)}%"></i></div>`;
   const body=$("#bagBody");
-  if(!bag.length){body.innerHTML=`<div style="padding:40px 0"><p class="h-s">Your bag is empty.</p><p class="muted-l" style="margin:6px 0 18px">Begin with the one most women return to.</p><a href="#product-radiance-elixir" class="btn btn-ink js-close">Radiance Elixir ${ARR}</a></div>`;$("#bagFoot").innerHTML="";$("#bagUp").innerHTML="";return;}
+  if(!bag.length){body.innerHTML=`<div style="padding:40px 0"><p class="h-s">Your bag is empty.</p><p class="muted-l" style="margin:6px 0 18px">Begin with the one most women return to.</p><a href="#product-radiance-elixir" class="btn btn-ink js-close">Intense Radiance 24K Gold Oil Serum ${ARR}</a></div>`;$("#bagFoot").innerHTML="";$("#bagUp").innerHTML="";return;}
   body.innerHTML=bag.map(l=>{const p=byId(l.id);return `<div class="li"><a href="#product-${p.id}" class="t js-close"><img class="${p.cat==="ritual"?"cv":""}" src="${thumbOf(p)}" alt="${p.name}"></a>
     <div><h4>${p.name}</h4><div style="font-size:13px" class="muted-l">${p.type}</div><div class="mq"><button data-l="${p.id}" data-d="-1" aria-label="Decrease">−</button><span>${l.q}</span><button data-l="${p.id}" data-d="1" aria-label="Increase">+</button></div><button class="rm" data-rm="${p.id}">Remove</button></div>
     <div style="font-weight:600">${money(p.price*l.q)}</div></div>`}).join("");
@@ -1352,11 +1973,13 @@ function applyCurrency(){$("#mmPanel").innerHTML=megaHTML();$$(".js-money").forE
 document.addEventListener("click",e=>{
   const a=e.target.closest("[data-add]"); if(a){e.preventDefault();e.stopPropagation();add(a.dataset.add);return;}
   const aq=e.target.closest("[data-addq]"); if(aq){add(aq.dataset.addq,+($("#pq")?.textContent||1));return;}
-  const go=e.target.closest("[data-goto]"); if(go){e.preventDefault();const id=go.dataset.goto;const doIt=()=>{const t=document.getElementById(id);if(t){lenis?lenis.scrollTo(t,{offset:id==="collection"?-30:0,duration:1.6}):t.scrollIntoView({behavior:"smooth"});}};if(!document.getElementById(id)){location.hash="#home";setTimeout(doIt,500);}else doIt();return;}
+  const go=e.target.closest("[data-goto]"); if(go){e.preventDefault();const id=go.dataset.goto;const doIt=()=>{if(id==="collection"&&innerWidth>820&&$("#dock")){const y=innerHeight*.9; lenis?lenis.scrollTo(y,{duration:1.6}):scrollTo({top:y,behavior:"smooth"}); return;} const t=document.getElementById(id);if(t){lenis?lenis.scrollTo(t,{offset:id==="collection"?-30:0,duration:1.6}):t.scrollIntoView({behavior:"smooth"});}};if(!document.getElementById(id)){location.hash="#home";setTimeout(doIt,500);}else doIt();return;}
   const l=e.target.closest("[data-l]"); if(l){const it=bag.find(x=>x.id===l.dataset.l);it.q+=+l.dataset.d;if(it.q<1)bag=bag.filter(x=>x!==it);saveBag();renderBag();return;}
   const rm=e.target.closest("[data-rm]"); if(rm){bag=bag.filter(x=>x.id!==rm.dataset.rm);saveBag();renderBag();return;}
   const q=e.target.closest("[data-q]"); if(q){const s=$("#pq");s.textContent=Math.max(1,Math.min(9,+s.textContent+ +q.dataset.q));return;}
-  const ht=e.target.closest("[data-hometab]"); if(ht){$$("[data-hometab]").forEach(x=>x.classList.toggle("on",x===ht));renderGrid($("#homeGrid"),listFor(ht.dataset.hometab).slice(0,8));return;}
+  const lg=e.target.closest("[data-lug]"); if(lg){setLu(+lg.dataset.lug);return;}
+  if(e.target.closest("#luPrev")){setLu((window.__lu||0)-1);return;}
+  const ht=e.target.closest("[data-hometab]"); if(ht){$$("[data-hometab]").forEach(x=>x.classList.toggle("on",x===ht));renderDock(listFor(ht.dataset.hometab).slice(0,12));return;}
   const ft=e.target.closest("[data-filter]"); if(ft){setShopCat(ft.dataset.filter);return;}
   const ctb=e.target.closest("[data-ct]"); if(ctb){$$("[data-ct]").forEach(x=>x.classList.toggle("on",x===ctb));const f=$(".js-ct");const call=ctb.dataset.ct==="call";f.dataset.mode=ctb.dataset.ct;$$(".ct-call",f).forEach(x=>x.hidden=!call);$$(".ct-msg",f).forEach(x=>x.hidden=call);$(".ct-btn").textContent=call?"Request callback":"Send message";return;}
   if(e.target.closest("#mmPanel a")){const mm=$("#mm");mm.classList.add("mm-off");mm.addEventListener("mouseleave",()=>mm.classList.remove("mm-off"),{once:true});}
